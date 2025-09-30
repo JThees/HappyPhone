@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HappyPhone Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>HappyPhone</h1>
+    <div class="app-meta">
+      <button class="settings-button" aria-label="Settings">
+        <span class="icon-gear"></span>
+      </button>
+      <span class="app-version">v1.5.1</span>
+    </div>
+  </header>
+
+  <main class="app-layout">
+    <section class="editor-panel">
+      <textarea id="note-editor" class="note-editor" placeholder="Start typing…"></textarea>
+    </section>
+
+    <aside class="sidebar">
+      <section class="info-card" id="contact-card">
+        <header class="info-card__header">
+          <h2>Contact Information</h2>
+          <div class="info-card__actions">
+            <button class="ghost-link" id="recent-tickets-btn">Recent Tickets</button>
+            <button class="ghost-link" id="edit-contact-btn">Edit All</button>
+          </div>
+        </header>
+        <div class="info-card__body">
+          <ul class="info-list" id="contact-fields">
+            <!-- Populated from API -->
+          </ul>
+        </div>
+      </section>
+
+      <section class="info-card" id="ticket-card">
+        <header class="info-card__header collapsible" data-target="#ticket-card-body">
+          <h2>Ticket Information</h2>
+          <button class="ghost-link" id="edit-ticket-btn">Edit All</button>
+          <span class="collapse-icon" aria-hidden="true"></span>
+        </header>
+        <div class="info-card__body collapsible-body" id="ticket-card-body">
+          <dl class="ticket-fields" id="ticket-fields">
+            <!-- Populated from API -->
+          </dl>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="action-bar">
+    <div class="ticket-meta">
+      <span class="ticket-number" id="ticket-number">Ticket#</span>
+      <span class="ticket-title" id="ticket-title">TicketTitle</span>
+    </div>
+
+    <div class="action-controls">
+      <button class="secondary-btn" id="previous-calls-btn">Previous Calls</button>
+
+      <label class="checkbox">
+        <input type="checkbox" id="internal-note-toggle" checked>
+        <span>Internal Note?</span>
+      </label>
+
+      <button class="primary-btn" id="add-to-ticket-btn">Add to Ticket</button>
+    </div>
+  </footer>
+
+  <!-- Previous Calls Modal -->
+  <dialog class="modal" id="previous-calls-modal">
+    <form method="dialog" class="modal__content">
+      <header class="modal__header">
+        <h3>Previous Calls</h3>
+        <button type="submit" class="modal__close" aria-label="Close">
+          <span class="icon-close"></span>
+        </button>
+      </header>
+      <ul class="call-history" id="call-history-list">
+        <!-- populated dynamically -->
+      </ul>
+      <footer class="modal__footer">
+        <button type="submit" class="secondary-btn">Close</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
