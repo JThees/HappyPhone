@@ -1,0 +1,69 @@
+Legal Issues
+Driving and Expungement
+
+Family and Saftey
+
+Housing
+
+Military, Immigration & Employment
+
+Money and Estate
+
+Other
+
+
+
+Check boxes to appear based on Legal Issues
+Driving and Expungement
+Type
+Multiple option
+Options
+Driving
+Expungement
+Other
+
+Family and Saftey
+Type
+Multiple option
+Options
+Adult Guardianship
+Child Support
+Child Custody
+Contempt
+Divorce
+Name/Gender Marker Change
+Parenting Time
+Paternity
+Relocation
+Other
+
+Housing
+Type
+Multiple option
+Options
+Rent
+Eviction
+Other
+
+Military, Immigration & Employment
+Type
+Multiple option
+Options
+Discrimination at Work
+Immigration
+Military and Veteran Assistance
+Other
+
+Money and Estate
+Type
+Multiple option
+Options
+Debt
+Estate
+Other
+
+Other
+Type
+Text
+Default Value
+Please describe in an internal note.

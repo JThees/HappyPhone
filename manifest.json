@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "HappyPhone Assistant",
+  "version": "0.1.0",
+  "description": "Helps agents manage HappyFox tickets during phone calls with contact/ticket data, note editor, and call history tracking",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.happyfox.com/*"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "HappyPhone Assistant"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://*.happyfox.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["config.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
