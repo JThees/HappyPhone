@@ -336,7 +336,7 @@ previousCallsModal.addEventListener('close', () => {
   callHistoryList.innerHTML = '';
 });
 
-// Add to ticket button
+// Add to ticket button - fills fields and adds note
 addToTicketBtn.addEventListener('click', async () => {
   const note = editor.value.trim();
 
@@ -346,16 +346,43 @@ addToTicketBtn.addEventListener('click', async () => {
   }
 
   try {
-    // Log the call
-    await chrome.runtime.sendMessage({
-      type: 'log-call',
-      payload: {
-        note,
-        internal: internalNoteToggle.checked
-      }
-    });
+    addToTicketBtn.disabled = true;
+    addToTicketBtn.textContent = 'Processing...';
 
-    // Insert note into HappyFox
+    // Get current contact and ticket data
+    const { contact, ticket } = await chrome.storage.local.get(['contact', 'ticket']);
+
+    let results = {
+      contactFieldsFilled: [],
+      ticketFieldsFilled: [],
+      noteInserted: false
+    };
+
+    // Step 1: Fill contact fields (only empty ones)
+    if (contact && (contact.name || contact.email || contact.phone || contact.preferredContactMethod)) {
+      const contactResponse = await chrome.runtime.sendMessage({
+        type: 'fill-contact-fields',
+        payload: { contact }
+      });
+
+      if (contactResponse.success) {
+        results.contactFieldsFilled = contactResponse.filledFields || [];
+      }
+    }
+
+    // Step 2: Fill ticket fields (only empty ones)
+    if (ticket && (ticket.county || ticket.legalIssue || Object.keys(ticket.checkboxes || {}).length > 0)) {
+      const ticketResponse = await chrome.runtime.sendMessage({
+        type: 'fill-ticket-fields',
+        payload: { ticket }
+      });
+
+      if (ticketResponse.success) {
+        results.ticketFieldsFilled = ticketResponse.filledFields || [];
+      }
+    }
+
+    // Step 3: Insert note into HappyFox
     const insertResponse = await chrome.runtime.sendMessage({
       type: 'insert-note',
       payload: {
@@ -365,14 +392,44 @@ addToTicketBtn.addEventListener('click', async () => {
     });
 
     if (insertResponse.success) {
-      alert('Note added to ticket successfully!');
-      editor.value = ''; // Clear editor after successful insertion
-    } else {
-      alert(`Failed to add note: ${insertResponse.error || 'Unknown error'}`);
+      results.noteInserted = true;
     }
+
+    // Step 4: Log the call
+    await chrome.runtime.sendMessage({
+      type: 'log-call',
+      payload: {
+        note,
+        internal: internalNoteToggle.checked
+      }
+    });
+
+    // Show results
+    const summary = [];
+    if (results.contactFieldsFilled.length > 0) {
+      summary.push(`Filled ${results.contactFieldsFilled.length} contact field(s)`);
+    }
+    if (results.ticketFieldsFilled.length > 0) {
+      summary.push(`Filled ${results.ticketFieldsFilled.length} ticket field(s)`);
+    }
+    if (results.noteInserted) {
+      summary.push('Note added');
+    }
+
+    if (summary.length > 0) {
+      alert(`Success! ${summary.join(', ')}`);
+      editor.value = ''; // Clear editor after successful operation
+    } else {
+      alert('Note added but no fields needed filling.');
+      editor.value = '';
+    }
+
   } catch (error) {
     console.error('Error adding to ticket:', error);
     alert('Error adding to ticket. Please try again.');
+  } finally {
+    addToTicketBtn.disabled = false;
+    addToTicketBtn.textContent = 'Add to Ticket';
   }
 });
 

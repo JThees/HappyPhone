@@ -6,7 +6,9 @@
       "Bash(node:*)",
       "Read(//c/**)",
       "Bash(unzip:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nImplement Phase 1 & 2: Data extraction and dynamic UI\n\nPhase 1 - Read ticket data from HappyFox:\n- Implement content script to extract contact info (name, email, phone, preferred contact method)\n- Extract ticket fields (county, legal issue, checkboxes)\n- Extract ticket metadata (number, title) from page title\n- Add comprehensive logging with emoji indicators for debugging\n- Handle empty field values (dash character) as empty strings\n- Support multi-value checkbox extraction (comma-separated)\n\nPhase 2 - Dynamic dropdowns and configuration:\n- Create config.json with all Indiana counties and legal issue categories\n- Populate County dropdown dynamically (92 counties)\n- Populate Legal Issue dropdown dynamically (6 categories)\n- Render checkboxes based on selected Legal Issue\n- Preserve checkbox state when loading saved data\n- Real-time storage sync with 500ms debounce\n\nAuthentication & Settings:\n- Add options page for HappyFox API credentials (domain, username, API key)\n- Implement configurable call history limit\n- Add settings button to popup header\n\nUI/UX Improvements:\n- Redesign layout to 600x700px popup without horizontal scrolling\n- Side-by-side cards for Contact and Ticket information\n- Full-width note editor below cards\n- Add \"Get Ticket Data\" button to pull from HappyFox\n- Add \"Clear Fields\" button with confirmation dialog\n- Collapsible ticket information card\n- Footer with ticket metadata display\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

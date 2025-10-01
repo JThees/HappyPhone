@@ -86,6 +86,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       handleCredentialsUpdated(payload);
       break;
 
+    case 'fill-contact-fields':
+      handleFillContactFields(payload, sendResponse);
+      return true;
+
+    case 'fill-ticket-fields':
+      handleFillTicketFields(payload, sendResponse);
+      return true;
+
     default:
       console.warn('Unknown message type:', type);
   }
@@ -239,4 +247,22 @@ function handleCredentialsUpdated(payload) {
     MAX_CALL_HISTORY = callHistoryLimit;
     console.log(`Call history limit updated to: ${MAX_CALL_HISTORY}`);
   }
+}
+
+// Fill contact fields in HappyFox
+async function handleFillContactFields(payload, sendResponse) {
+  const response = await notifyContentScript({
+    type: 'fill-contact-fields',
+    payload
+  });
+  sendResponse(response);
+}
+
+// Fill ticket fields in HappyFox
+async function handleFillTicketFields(payload, sendResponse) {
+  const response = await notifyContentScript({
+    type: 'fill-ticket-fields',
+    payload
+  });
+  sendResponse(response);
 }

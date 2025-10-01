@@ -1,0 +1,3438 @@
+<html lang="helpdesk-en,en,en,helpdesk-en" antidoteapi_jsconnect="true" style="--hf-hd-bg-top-bar: rgba(30,32,36,1); --hf-hd-bg-pinned-tickets-left-pane: rgba(30,32,36,1); --hf-hd-border-pinned-tickets-notification: rgba(30,32,36,1); --hf-hd-bg-automate-overview-box: rgba(30,32,36,1); --hf-hd-bg-pop-over-header: rgba(30,32,36,1); --hf-hd-bg-floating-editor-toggle: rgba(30,32,36,1); --hf-hd-bg-modal-header: rgba(30,32,36,1); --hf-hd-bg-modal-body: rgba(255,255,255,1); --hf-hd-bg-left-pane: rgba(21,23,26,1); --hf-hd-bg-floating-editor-time: rgba(21,23,26,1); --hf-hd-bg-primary-action: rgba(35, 96, 200, 1); --hf-hd-bg-primary-action-hover: rgba(24, 68, 142, 1); --hf-hd-bg-form-input: rgba(255,255,255,1); --hf-hd-bg-form-input-disabled: rgba(247,247,247,1); --hf-hd-bg-form-section-header: rgba(247,247,247,1); --hf-hd-bg-private-note-update: rgba(255,249,225,1); --hf-hd-border-primary-action-100: rgba(35, 96, 200, 1); --hf-hd-border-primary-action-60: rgba(35, 96, 200, 0.6); --hf-hd-border-form-input: rgba(21,23,26,0.2); --hf-hd-border-caret: rgba(255,255,255,1); --hf-hd-bg-editor-highlight: rgba(244,244,244,1); --hf-hd-box-shadow-floating-editor-expanded: none; --hf-hd-bg-home-page: rgba(214,213,228,1); --hf-hd-text-private-note-editor: rgba(21,23,26,0.8); --hf-hd-text-rating-inputs: rgba(250,250,250,1); --hf-hd-text-rating-star-filled: rgba(244,195,53,1); --hf-hd-text-rating-star-unfilled: rgba(194,194,194,1); --hf-hd-text-rating-inputs-stroke: rgba(21, 23, 26, 0.04); --hf-hd-bg1-100: rgba(255,255,255,1); --hf-hd-bg1-80: rgba(255,255,255,0.8); --hf-hd-bg1-60: rgba(255,255,255,0.6); --hf-hd-bg1-40: rgba(255,255,255,0.4); --hf-hd-bg1-20: rgba(255,255,255,0.2); --hf-hd-bg1-15: rgba(255,255,255,0.15); --hf-hd-bg1-10: rgba(255,255,255,0.1); --hf-hd-bg1-4: rgba(255,255,255,0.04); --hf-hd-bg1-2: rgba(255,255,255,0.02); --hf-hd-bg2-100: rgba(230,230,231,1); --hf-hd-bg3-100: rgba(250,250,250,1); --hf-hd-bg4-100: rgba(244,244,244,1); --hf-hd-text1-100: rgba(21,23,26,1); --hf-hd-text1-80: rgba(21,23,26,0.8); --hf-hd-text1-70: rgba(21,23,26,0.7); --hf-hd-text1-60: rgba(21,23,26,0.6); --hf-hd-text1-40: rgba(21,23,26,0.4); --hf-hd-text1-20: rgba(21,23,26,0.2); --hf-hd-border1-4: rgba(21, 23, 26, 0.04); --hf-hd-border1-8: rgba(21, 23, 26, 0.08); --hf-hd-border1-15: rgba(21, 23, 26, 0.15); --hf-hd-border1-20: rgba(21, 23, 26, 0.2); --hf-hd-border1-40: rgba(21, 23, 26, 0.4); --hf-hd-border1-60: rgba(21, 23, 26, 0.6); --hf-hd-border1-80: rgba(21, 23, 26, 0.8); --hf-hd-border1-100: rgba(21, 23, 26, 1); --hf-hd-cke-icons-filter: unset;" data-qb-installed="true"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<meta name="happyfox-web/config/environment" content="%7B%22modulePrefix%22%3A%22happyfox-web%22%2C%22environment%22%3A%22production%22%2C%22deployEnvironment%22%3A%22production%22%2C%22releaseVersion%22%3A%22ade8c822d1ec49f5e52e7e3a354925f4341a66a3%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22auto%22%2C%22isRemote%22%3Afalse%2C%22cdnURL%22%3A%22https%3A%2F%2Fd12tly1s0ox52d.cloudfront.net%2F%22%2C%22headwayId%22%3A%22xd4rgx%22%2C%22disableCaptcha%22%3Afalse%2C%22hfcEmbedToken%22%3A%220794bb50-9619-11ed-83eb-53dfb5b2385e%22%2C%22hfcAssetsURL%22%3A%22https%3A%2F%2Fwidget.happyfoxchat.com%2Fv2%2Fvisitor%22%2C%22hfTicketUpdateMaxSize%22%3A%225120%22%2C%22realtimeRefreshJitterMinValue%22%3A0%2C%22realtimeRefreshJitterMaxValue%22%3A30%2C%22allowSentry%22%3Atrue%2C%22useAuthToken%22%3Afalse%2C%22availabilityWarningFirstTimeOut%22%3A%22300000%22%2C%22availabilityWarningFinalTimeOut%22%3A%2210800000%22%2C%22ember-websockets%22%3A%7B%22socketIO%22%3Atrue%7D%2C%22contentSecurityPolicy%22%3A%7B%22connect-src%22%3A%22'self'%20https%3A%2F%2Frealtime.happyfox.co%2F%20wss%3A%2F%2Frealtime.happyfox.co%2F%20https%3A%2F%2Frealtime.happyfox.com%2F%20wss%3A%2F%2Frealtime.happyfox.com%2F%20app.getsentry.com%20https%3A%2F%2Fhappyfoxchat.com%20https%3A%2F%2F*.logs.datadoghq.com%22%2C%22style-src%22%3A%22'self'%20'unsafe-inline'%20use.typekit.net%20https%3A%2F%2Fhf-web.s3.us-east-1.amazonaws.com%20http%3A%2F%2Fcdn.headwayapp.co%2Fheadway-animate.css%20https%3A%2F%2Fengage.supporthive.com%20https%3A%2F%2Freleases.happyfox.com%2F%20http%3A%2F%2Freleases.happyfox.com%2Fload-widget%2F%22%2C%22img-src%22%3A%22'self'%20https%3A%2F%2Fhf-next-frontend.s3-us-west-1.amazonaws.com%20https%3A%2F%2Fhf-web.s3.us-east-1.amazonaws.com%20https%3A%2F%2Fs3-us-west-1.amazonaws.com%20data%3A%20app.getsentry.com%22%2C%22default-src%22%3A%22'none'%22%2C%22font-src%22%3A%22'self'%20https%3A%2F%2Fhf-web.s3.us-east-1.amazonaws.com%22%2C%22media-src%22%3A%22'self'%20https%3A%2F%2Fhf-web.s3.us-east-1.amazonaws.com%22%2C%22script-src%22%3A%22'self'%20https%3A%2F%2Fhf-web.s3.us-east-1.amazonaws.com%20http%3A%2F%2Fcdn.headwayapp.co%2Fwidget.js%20https%3A%2F%2Fengage.supporthive.com%20https%3A%2F%2Freleases.happyfox.com%2F%20http%3A%2F%2Freleases.happyfox.com%2Fload-widget%2F%20'unsafe-inline'%20'unsafe-eval'%20https%3A%2F%2Fwww.youtube.com%2F%20https%3A%2F%2Ffonts.gstatic.com%2F%20https%3A%2F%2Ffonts.googleapis.com%2F%20https%3A%2F%2Fcdnjs.cloudflare.com%2F%20https%3A%2F%2Fcdn.pubnub.com%2F%20https%3A%2F%2Fcdn.rawgit.com%2F%20https%3A%2F%2Fsipjs.com%2F%20https%3A%2F%2Fmedia.twiliocdn.com%22%2C%22frame-src%22%3A%22https%3A%2F%2Fhf-web.s3.us-east-1.amazonaws.com%20http%3A%2F%2Fheadway-widget.net%20https%3A%2F%2Fengage.supporthive.com%20https%3A%2F%2Freleases.happyfox.com%2F%20http%3A%2F%2Freleases.happyfox.com%2Fload-widget%2F%20https%3A%2F%2Fservice.devtest.ringcentral.com%22%2C%22object-src%22%3A%22'self'%20data%3A%22%2C%22child-src%22%3A%22https%3A%2F%2Fhf-web.s3.us-east-1.amazonaws.com%20http%3A%2F%2Fheadway-widget.net%20https%3A%2F%2Fengage.supporthive.com%20https%3A%2F%2Freleases.happyfox.com%2F%20http%3A%2F%2Freleases.happyfox.com%2Fload-widget%2F%20https%3A%2F%2Fservice.devtest.ringcentral.com%22%7D%2C%22gReCaptcha%22%3A%7B%22jsUrl%22%3A%22https%3A%2F%2Frecaptcha.net%2Frecaptcha%2Fapi.js%3Frender%3Dexplicit%22%2C%22siteKey%22%3A%226LcoTEwUAAAAAM0Mst78EhadVrHJDjCONZBcIvz8%22%7D%2C%22isAppsDisabled%22%3Afalse%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_JQUERY_INTEGRATION%22%3Atrue%7D%2C%22APP%22%3A%7B%22STORE_LOGS%22%3Atrue%2C%22LOGS_LIMIT%22%3A500%2C%22DISABLE_LOGS%22%3Afalse%2C%22name%22%3A%22happyfox-web%22%2C%22version%22%3A%220.0.0%2Bade8c822%22%2C%22API_HOST%22%3A%22http%3A%2F%2Flocalhost%3A8000%22%2C%22API_NAMESPACE%22%3A%22api%22%2C%22API_ADD_TRAILING_SLASHES%22%3Atrue%7D%2C%22dataDogRum%22%3A%7B%22applicationId%22%3A%22beb8f598-bfea-41d8-a1bd-c74a47cf19c5%22%2C%22clientToken%22%3A%22pubd9c74435f1b871c1be1b99f961e890bc%22%2C%22sampleRate%22%3A%225%22%2C%22env%22%3A%22production%22%2C%22releaseVersion%22%3A%22ade8c822d1ec49f5e52e7e3a354925f4341a66a3%22%2C%22branchName%22%3A%22Production%22%7D%2C%22ember-cli-mirage%22%3A%7B%22usingProxy%22%3Afalse%2C%22useDefaultPassthroughs%22%3Atrue%7D%2C%22exportApplicationGlobal%22%3Afalse%7D">
+    <style>
+      .hf-helpdesk-loader-new-image {
+        width: 50px;
+        height: 50px;
+      }
+      .hf-app-initial-loader {
+        height: 100vh;
+      }
+      .hf-loading-viewport-centered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .hf-loading-circle {
+        width: 20px;
+        height: 20px;
+        background-color: #828282;
+        border-radius: 50%;
+        display: inline-block;
+        animation: loader 0.7s infinite ease-in-out;
+      }
+      .hf-mod-center-loading-circle {
+        animation-delay: 0.35s;
+        margin: auto 7px;
+      }
+
+      .hf-helpdesk-loader-image-new {
+        width: 50px;
+        height: 50px;
+      }
+
+      @keyframes loader {
+        0% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(0.7);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="https://d12tly1s0ox52d.cloudfront.net/assets/vendor-13abe00ddb7c3a2f1efd58c205204064.css" integrity="sha256-ne6uQzZZMt7tdWcr8+SJT3Ifsl85lpj5Bv0Jhmrs8n8= sha512-pmYY01YXimkm0qBH4B1g8echrtCUkYz26BznrJYgfFIbWSsJ8d9pUmZpypM5WF+7OYH6S607BHLLv8LhdX9XSg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://d12tly1s0ox52d.cloudfront.net/assets/happyfox-web-92af3a50d8e61c83c7d177e4a6b1b4f8.css" integrity="sha256-FG/t/j6k3OmgwcukQGUU3Q6T1nguibigtooq4MsjjEM= sha512-iLmX5knsMOQPxtgXTxsoLEEcwN7Mmr37UKBzOHJHHHsjdK/a4bIUOqdjJXoiL2umkXIsvAAzTKzTt4cyEkMCpQ==" crossorigin="anonymous">
+    
+  <style>.cke{visibility:hidden;}</style><link type="image/x-icon" rel="icon" href="https://hf-files-oregon.s3.amazonaws.com/hdpilhd_user_customized/favicon.png?1759341493416"><style type="text/css">.lf-progress {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  width: 100%;
+  /* margin: 0 10px; */
+  height: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lf-progress:focus {
+  outline: none;
+  border: none;
+}
+.lf-progress::-moz-range-track {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.lf-progress::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-moz-range-thumb {
+  -moz-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.lf-progress::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-thumb {
+  border: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress:focus::-ms-fill-lower {
+  background: #ccc;
+}
+.lf-progress:focus::-ms-fill-upper {
+  background: #ccc;
+}
+.lf-player-container :focus {
+  outline: 0;
+}
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-player-btn-container {
+  display: flex;
+  align-items: center;
+}
+.lf-player-btn {
+  cursor: pointer;
+  fill: #999;
+  width: 14px;
+}
+
+.lf-player-btn.active {
+  fill: #555;
+}
+
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  padding: 10px;
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-arrow {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  bottom: -9px;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+}
+
+.lf-left-align,
+.lf-left-align .lfarrow {
+  left: 0;
+  right: unset;
+}
+
+.lf-right-align,
+.lf-right-align .lf-arrow {
+  right: 0;
+  left: unset;
+}
+
+.lf-text-input {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 60px;
+  margin: 0;
+}
+
+.lf-color-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.lf-color-selectors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lf-color-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lf-color-component strong {
+  width: 40px;
+}
+
+.lf-color-component input[type='range'] {
+  margin: 0 0 0 10px;
+}
+
+.lf-color-component input[type='number'] {
+  width: 50px;
+  margin: 0 0 0 10px;
+}
+
+.lf-color-preview {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.lf-preview {
+  height: 60px;
+  width: 60px;
+}
+
+.lf-popover-snapshot {
+  width: 150px;
+}
+.lf-popover-snapshot h5 {
+  margin: 5px 0 10px 0;
+  font-size: 0.75rem;
+}
+.lf-popover-snapshot a {
+  display: block;
+  text-decoration: none;
+}
+.lf-popover-snapshot a:before {
+  content: '⥼';
+  margin-right: 5px;
+}
+.lf-popover-snapshot .lf-note {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+}
+.lf-player-controls > div {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.lf-player-controls > div:first-child {
+  margin-left: 0px;
+}
+.lf-player-controls > div:last-child {
+  margin-right: 0px;
+}
+</style><style type="text/css">pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*!
+  Theme: Default
+  Description: Original highlight.js style
+  Author: (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
+  Maintainer: @highlightjs/core-team
+  Website: https://highlightjs.org/
+  License: see project LICENSE
+  Touched: 2021
+*/
+/*
+This is left on purpose making default.css the single file that can be lifted
+as-is from the repository directly without the need for a build step
+
+Typically this "required" baseline CSS is added by `makestuff.js` during build.
+*/
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/* end baseline CSS */
+.hljs {
+  background: #F3F3F3;
+  color: #444
+}
+/* Base color: saturation 0; */
+.hljs-subst {
+  /* default */
+  
+}
+/* purposely ignored */
+.hljs-formula,
+.hljs-attr,
+.hljs-property,
+.hljs-params {
+  
+}
+.hljs-comment {
+  color: #697070
+}
+.hljs-tag,
+.hljs-punctuation {
+  color: #444a
+}
+.hljs-tag .hljs-name,
+.hljs-tag .hljs-attr {
+  color: #444
+}
+.hljs-keyword,
+.hljs-attribute,
+.hljs-selector-tag,
+.hljs-meta .hljs-keyword,
+.hljs-doctag,
+.hljs-name {
+  font-weight: bold
+}
+/* User color: hue: 0 */
+.hljs-type,
+.hljs-string,
+.hljs-number,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-quote,
+.hljs-template-tag,
+.hljs-deletion {
+  color: #880000
+}
+.hljs-title,
+.hljs-section {
+  color: #880000;
+  font-weight: bold
+}
+.hljs-regexp,
+.hljs-symbol,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-link,
+.hljs-selector-attr,
+.hljs-operator,
+.hljs-selector-pseudo {
+  color: #ab5656
+}
+/* Language color: hue: 90; */
+.hljs-literal {
+  color: #695
+}
+.hljs-built_in,
+.hljs-bullet,
+.hljs-code,
+.hljs-addition {
+  color: #397300
+}
+/* Meta color: hue: 200 */
+.hljs-meta {
+  color: #1f7199
+}
+.hljs-meta .hljs-string {
+  color: #38a
+}
+/* Misc effects */
+.hljs-emphasis {
+  font-style: italic
+}
+.hljs-strong {
+  font-weight: bold
+}</style><style>.picker_wrapper.no_alpha .picker_alpha{display:none}.picker_wrapper.no_editor .picker_editor{position:absolute;z-index:-1;opacity:0}.picker_wrapper.no_cancel .picker_cancel{display:none}.layout_default.picker_wrapper{display:flex;flex-flow:row wrap;justify-content:space-between;align-items:stretch;font-size:10px;width:25em;padding:.5em}.layout_default.picker_wrapper input,.layout_default.picker_wrapper button{font-size:1rem}.layout_default.picker_wrapper>*{margin:.5em}.layout_default.picker_wrapper::before{content:"";display:block;width:100%;height:0;order:1}.layout_default .picker_slider,.layout_default .picker_selector{padding:1em}.layout_default .picker_hue{width:100%}.layout_default .picker_sl{flex:1 1 auto}.layout_default .picker_sl::before{content:"";display:block;padding-bottom:100%}.layout_default .picker_editor{order:1;width:6.5rem}.layout_default .picker_editor input{width:100%;height:100%}.layout_default .picker_sample{order:1;flex:1 1 auto}.layout_default .picker_done,.layout_default .picker_cancel{order:1}.picker_wrapper{box-sizing:border-box;background:#f2f2f2;box-shadow:0 0 0 1px silver;cursor:default;font-family:sans-serif;color:#444;pointer-events:auto}.picker_wrapper:focus{outline:none}.picker_wrapper button,.picker_wrapper input{box-sizing:border-box;border:none;box-shadow:0 0 0 1px silver;outline:none}.picker_wrapper button:focus,.picker_wrapper button:active,.picker_wrapper input:focus,.picker_wrapper input:active{box-shadow:0 0 2px 1px #1e90ff}.picker_wrapper button{padding:.4em .6em;cursor:pointer;background-color:#f5f5f5;background-image:linear-gradient(0deg, gainsboro, transparent)}.picker_wrapper button:active{background-image:linear-gradient(0deg, transparent, gainsboro)}.picker_wrapper button:hover{background-color:#fff}.picker_selector{position:absolute;z-index:1;display:block;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);border:2px solid #fff;border-radius:100%;box-shadow:0 0 3px 1px #67b9ff;background:currentColor;cursor:pointer}.picker_slider .picker_selector{border-radius:2px}.picker_hue{position:relative;background-image:linear-gradient(90deg, red, yellow, lime, cyan, blue, magenta, red);box-shadow:0 0 0 1px silver}.picker_sl{position:relative;box-shadow:0 0 0 1px silver;background-image:linear-gradient(180deg, white, rgba(255, 255, 255, 0) 50%),linear-gradient(0deg, black, rgba(0, 0, 0, 0) 50%),linear-gradient(90deg, #808080, rgba(128, 128, 128, 0))}.picker_alpha,.picker_sample{position:relative;background:linear-gradient(45deg, lightgrey 25%, transparent 25%, transparent 75%, lightgrey 75%) 0 0/2em 2em,linear-gradient(45deg, lightgrey 25%, white 25%, white 75%, lightgrey 75%) 1em 1em/2em 2em;box-shadow:0 0 0 1px silver}.picker_alpha .picker_selector,.picker_sample .picker_selector{background:none}.picker_editor input{font-family:monospace;padding:.2em .4em}.picker_sample::before{content:"";position:absolute;display:block;width:100%;height:100%;background:currentColor}.picker_arrow{position:absolute;z-index:-1}.picker_wrapper.popup{position:absolute;z-index:2;margin:1.5em}.picker_wrapper.popup,.picker_wrapper.popup .picker_arrow::before,.picker_wrapper.popup .picker_arrow::after{background:#f2f2f2;box-shadow:0 0 10px 1px rgba(0,0,0,.4)}.picker_wrapper.popup .picker_arrow{width:3em;height:3em;margin:0}.picker_wrapper.popup .picker_arrow::before,.picker_wrapper.popup .picker_arrow::after{content:"";display:block;position:absolute;top:0;left:0;z-index:-99}.picker_wrapper.popup .picker_arrow::before{width:100%;height:100%;-webkit-transform:skew(45deg);transform:skew(45deg);-webkit-transform-origin:0 100%;transform-origin:0 100%}.picker_wrapper.popup .picker_arrow::after{width:150%;height:150%;box-shadow:none}.popup.popup_top{bottom:100%;left:0}.popup.popup_top .picker_arrow{bottom:0;left:0;-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}.popup.popup_bottom{top:100%;left:0}.popup.popup_bottom .picker_arrow{top:0;left:0;-webkit-transform:rotate(90deg) scale(1, -1);transform:rotate(90deg) scale(1, -1)}.popup.popup_left{top:0;right:100%}.popup.popup_left .picker_arrow{top:0;right:0;-webkit-transform:scale(-1, 1);transform:scale(-1, 1)}.popup.popup_right{top:0;left:100%}.popup.popup_right .picker_arrow{top:0;left:0}</style><style type="text/css">@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.ProseMirror-menubar-wrapper {
+  --hf-pm-primary-color: rgba(38, 63, 232, 1);
+  --hf-pm-primaryHover-color: var(--hf-pm-primary-color);
+  background-color: var(--hf-pm-bg-color, #fff);
+  /* Make sure li selections wrap around markers */
+  /* Protect against generic img rules */
+  /* Add space around the hr to make clicking it easier */
+  /* styles related to color picker(vanilla-picker) */
+  /* Give selected cells a blue overlay */
+  border: none;
+  outline: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /*Temp need to remove later*/
+  /* Utility Classes */
+}
+.ProseMirror-menubar-wrapper .badge-wrapper {
+  display: inline;
+  margin: 0 2px 4px;
+  cursor: pointer;
+  white-space: pre;
+}
+@keyframes blink-animation {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.ProseMirror-menubar-wrapper .mic-listening {
+  animation: blink-animation 1s linear infinite;
+}
+.ProseMirror-menubar-wrapper .badge-id {
+  display: inline-block;
+  align-items: center;
+  margin-right: 0px;
+  border: 1px solid #b4cfea;
+  border-radius: 4px 0 0 4px;
+  padding: 2px 7px;
+  background-color: #a7cbef;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.ProseMirror-menubar-wrapper .badge-value {
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: 2px 7px;
+  border: 1px solid #b4cfea;
+  border-radius: 0 4px 4px 0;
+  border-left: 0;
+  background-color: #eef4ff;
+  color: #000;
+}
+.ProseMirror-menubar-wrapper .badge-data {
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: 2px 7px;
+  border: 1px solid #b4cfea;
+  background-color: #eef4ff;
+  border-radius: 4px;
+  color: #000;
+}
+.ProseMirror-menubar-wrapper .badge {
+  padding: 0px 2px;
+}
+.ProseMirror-menubar-wrapper .editor-container {
+  white-space: pre-wrap;
+}
+.ProseMirror-menubar-wrapper .badge_one {
+  display: inline-flex;
+  width: 5px;
+  height: 100%;
+}
+.ProseMirror-menubar-wrapper .ProseMirror p {
+  padding: 5px;
+  margin: 0px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror details > *:not(summary) {
+  margin-left: 10px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror {
+  position: relative;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  white-space: break-spaces;
+  -webkit-font-variant-ligatures: none;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0; /* the above doesn't seem to work in Edge */
+}
+.ProseMirror-menubar-wrapper .ProseMirror pre {
+  white-space: pre-wrap;
+}
+.ProseMirror-menubar-wrapper .ProseMirror li {
+  position: relative;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-hideselection *::selection {
+  background: transparent;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-hideselection *::-moz-selection {
+  background: transparent;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-hideselection {
+  caret-color: transparent;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-selectednode {
+  outline: 2px solid #8cf;
+}
+.ProseMirror-menubar-wrapper li.ProseMirror-selectednode {
+  outline: none;
+}
+.ProseMirror-menubar-wrapper li.ProseMirror-selectednode:after {
+  content: "";
+  position: absolute;
+  left: -32px;
+  right: -2px;
+  top: -2px;
+  bottom: -2px;
+  border: 2px solid #8cf;
+  pointer-events: none;
+}
+.ProseMirror-menubar-wrapper img.ProseMirror-separator {
+  display: inline !important;
+  border: none !important;
+  margin: 0 !important;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-textblock-dropdown {
+  min-width: 3em;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu {
+  margin: 0 -4px;
+  line-height: 1;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-tooltip .ProseMirror-menu {
+  width: -webkit-fit-content;
+  width: fit-content;
+  white-space: pre;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem {
+  display: flex !important;
+  align-items: center;
+  color: #484848;
+  height: 40px;
+  position: relative;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening),
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text {
+  color: var(--hf-pm-toolbarTextAndIcon-color, #000);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening) svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text svg path {
+  fill: var(--hf-pm-toolbarTextAndIcon-color, #000);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).remove-link-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).remove-link-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).remove-link-menu svg polyline, .ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).anchor-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).anchor-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).anchor-menu svg polyline, .ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).strike-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).strike-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).strike-menu svg polyline, .ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).horizontal-line-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).horizontal-line-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).horizontal-line-menu svg polyline, .ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).block-quote-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).block-quote-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).block-quote-menu svg polyline, .ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).remove-block-quote-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).remove-block-quote-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).remove-block-quote-menu svg polyline, .ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).left-text-align-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).left-text-align-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).left-text-align-menu svg polyline, .ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).center-text-align-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).center-text-align-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).center-text-align-menu svg polyline, .ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).right-text-align-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).right-text-align-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).right-text-align-menu svg polyline, .ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).justify-text-align-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).justify-text-align-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).justify-text-align-menu svg polyline, .ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).markdown-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).markdown-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).markdown-menu svg polyline, .ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).insert-table-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).insert-table-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).insert-table-menu svg polyline,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.remove-link-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.remove-link-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.remove-link-menu svg polyline,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.anchor-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.anchor-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.anchor-menu svg polyline,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.strike-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.strike-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.strike-menu svg polyline,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.horizontal-line-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.horizontal-line-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.horizontal-line-menu svg polyline,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.block-quote-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.block-quote-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.block-quote-menu svg polyline,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.remove-block-quote-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.remove-block-quote-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.remove-block-quote-menu svg polyline,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.left-text-align-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.left-text-align-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.left-text-align-menu svg polyline,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.center-text-align-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.center-text-align-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.center-text-align-menu svg polyline,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.right-text-align-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.right-text-align-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.right-text-align-menu svg polyline,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.justify-text-align-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.justify-text-align-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.justify-text-align-menu svg polyline,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.markdown-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.markdown-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.markdown-menu svg polyline,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.insert-table-menu svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.insert-table-menu svg line,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.insert-table-menu svg polyline {
+  stroke: var(--hf-pm-toolbarTextAndIcon-color, #000);
+  fill: none;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).font-background svg path,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.font-background svg path {
+  fill: var(--hf-pm-bg-color, #fff);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-icon:not(.speech-recognition.mic-listening).font-background svg rect,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .ProseMirror-menu-icon-text.font-background svg rect {
+  fill: var(--hf-pm-toolbarTextAndIcon-color, #000);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem input,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem select,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem textarea {
+  background-color: var(--hf-pm-fieldBg-color, rgb(255, 255, 255));
+  color: var(--hf-pm-toolbarTextAndIcon-color, #000);
+  border-color: var(--hf-pm-commonBorder-color, rgb(199, 199, 199));
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem input:focus,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem select:focus,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem textarea:focus {
+  border-color: var(--hf-pm-fieldBorder-color, rgb(199, 199, 199));
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem button.secondary-button {
+  background-color: var(--hf-pm-secondaryButtonBg-color, rgb(246, 246, 246));
+  color: var(--hf-pm-secondaryButtonText-color, #000);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown,
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-menu {
+  font-size: 90%;
+  white-space: nowrap;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown {
+  vertical-align: 1px;
+  cursor: pointer;
+  position: relative;
+  font-size: 12px;
+  color: var(--hf-pm-toolbarTextAndIcon-color, #000);
+  padding: 5px 25px 5px 8px;
+  border: 1px solid transparent;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-wrap {
+  display: inline-block;
+  position: relative;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-wrap:hover .ProseMirror-menu-dropdown {
+  border-radius: 6px;
+  border: 1px solid var(--hf-pm-toolbarHoverBorder-color, rgb(239, 239, 239));
+  box-shadow: var(--hf-pm-toolbarHoverShadow-color, 0px 2px 5px rgba(0, 0, 0, 0.1023));
+  background-color: var(--hf-pm-toolbarHoverBg-color, rgb(255, 255, 255));
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown:after {
+  content: "";
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid var(--hf-pm-toolbarTextAndIcon-color, #000);
+  position: absolute;
+  right: 4px;
+  top: calc(50% - 2px);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-menu,
+.ProseMirror-menubar-wrapper .ProseMirror-menu-submenu {
+  position: absolute;
+  background: var(--hf-pm-panelBg-color, white);
+  color: var(--hf-pm-text-color, #666);
+  border: 1px solid var(--hf-pm-commonBorder-color, #aaa);
+  padding: 2px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-menu {
+  z-index: 15;
+  max-height: 170px;
+  overflow: auto;
+  color: var(--hf-pm-text-color, #484848);
+  border-radius: 0px 6px 6px 6px;
+  border: 1px solid var(--hf-pm-commonBorder-color, rgb(239, 239, 239));
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1023);
+  background-color: var(--hf-pm-panelBg-color, rgb(255, 255, 255));
+  top: 24px;
+  left: -1px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-item {
+  cursor: pointer;
+  padding: 2px 8px 2px 4px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-item:hover {
+  background: var(--hf-pm-toolbarHoverBg-color, #f2f2f2);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-submenu-wrap {
+  position: relative;
+  margin-right: -4px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-submenu-label:after {
+  content: "";
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid currentColor;
+  opacity: 0.6;
+  position: absolute;
+  right: 4px;
+  top: calc(50% - 4px);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-submenu {
+  display: none;
+  min-width: 4em;
+  left: 100%;
+  top: -3px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-active {
+  background: var(--hf-pm-toolbarHoverBg-color, #eee);
+  border-radius: 6px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-active.ProseMirror-icon {
+  border: 1px solid var(--hf-pm-toolbarHoverBorder-color, rgb(239, 239, 239));
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-disabled {
+  opacity: 0.3;
+  cursor: not-allowed !important;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-example-setup-style li p {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-disabled:hover {
+  border-radius: 0px !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  background-color: inherit !important;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-submenu-wrap:hover .ProseMirror-menu-submenu,
+.ProseMirror-menubar-wrapper .ProseMirror-menu-submenu-wrap-active .ProseMirror-menu-submenu {
+  display: block;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menubar {
+  display: flex;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  position: relative;
+  min-height: inherit;
+  padding: 0px 9px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--hf-pm-toolbarBg-color, white);
+  z-index: 1;
+  overflow: visible;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--hf-pm-commonBorder-color, #e8e8e8);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-icon {
+  display: inline-block !important;
+  line-height: 0.8;
+  padding: 3px 2px;
+  cursor: pointer;
+  white-space: normal;
+  border: 1px solid transparent;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-icon-text {
+  display: flex !important;
+  align-items: center;
+  line-height: 0.8;
+  padding: 3px 8px 3px 5px;
+  cursor: pointer;
+  white-space: normal;
+  font-size: 13px;
+  border: 1px solid transparent;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-text {
+  padding-left: 3px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-icon:hover,
+.ProseMirror-menubar-wrapper .ProseMirror-menu-icon-text:hover {
+  border-radius: 6px;
+  border: 1px solid var(--hf-pm-toolbarHoverBorder-color, rgb(239, 239, 239));
+  box-shadow: var(--hf-pm-toolbarHoverShadow-color, 0px 2px 5px rgba(0, 0, 0, 0.1023));
+  background-color: var(--hf-pm-toolbarHoverBg-color, rgb(255, 255, 255));
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-disabled.ProseMirror-icon {
+  cursor: not-allowed;
+  border: 1px solid transparent;
+  box-shadow: none;
+  background-color: initial;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-icon span {
+  vertical-align: text-top;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-gapcursor {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-gapcursor:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  width: 20px;
+  border-top: 1px solid black;
+  animation: ProseMirror-cursor-blink 1.1s steps(2, start) infinite;
+}
+@keyframes ProseMirror-cursor-blink {
+  to {
+    visibility: hidden;
+  }
+}
+.ProseMirror-menubar-wrapper .ProseMirror-focused .ProseMirror-gapcursor {
+  display: block;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-example-setup-style hr {
+  padding: 2px 10px;
+  border: none;
+  margin: 1em 0;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-example-setup-style hr:after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: silver;
+  line-height: 2px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror ul,
+.ProseMirror-menubar-wrapper .ProseMirror ol {
+  padding-left: 30px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror blockquote {
+  padding-left: 1em;
+  border-left: 3px solid #eee;
+  margin-left: 0;
+  margin-right: 0;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-example-setup-style img {
+  cursor: default;
+  max-width: 100%;
+  height: auto !important;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-prompt {
+  background: white;
+  padding: 5px 10px 5px 15px;
+  border: 1px solid silver;
+  position: fixed;
+  border-radius: 3px;
+  z-index: 11;
+  box-shadow: -0.5px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-prompt h5 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 100%;
+  color: #444;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-prompt input[type=text],
+.ProseMirror-menubar-wrapper .ProseMirror-prompt textarea {
+  background: #eee;
+  border: none;
+  outline: none;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-prompt input[type=text] {
+  padding: 0 4px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-prompt-close {
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  color: #666;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-prompt-close:after {
+  content: "✕";
+  font-size: 12px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-invalid {
+  background: #ffc;
+  border: 1px solid #cc7;
+  border-radius: 4px;
+  padding: 5px 10px;
+  position: absolute;
+  min-width: 10em;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-prompt-buttons {
+  margin-top: 5px;
+  display: none;
+}
+.ProseMirror-menubar-wrapper .ProseMirror p:first-child,
+.ProseMirror-menubar-wrapper .ProseMirror h1:first-child,
+.ProseMirror-menubar-wrapper .ProseMirror h2:first-child,
+.ProseMirror-menubar-wrapper .ProseMirror h3:first-child,
+.ProseMirror-menubar-wrapper .ProseMirror h4:first-child,
+.ProseMirror-menubar-wrapper .ProseMirror h5:first-child,
+.ProseMirror-menubar-wrapper .ProseMirror h6:first-child,
+.ProseMirror-menubar-wrapper .ProseMirror ol:first-child,
+.ProseMirror-menubar-wrapper .ProseMirror ul:first-child {
+  margin-top: 10px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror {
+  padding: 4px 8px 4px 14px;
+  line-height: 1.2;
+  outline: none;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-example-setup-style {
+  flex: 1;
+  overflow: auto;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-example-setup-style a {
+  cursor: pointer;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-panel,
+.ProseMirror-menubar-wrapper .insert-table-panel,
+.ProseMirror-menubar-wrapper .insert-image-panel,
+.ProseMirror-menubar-wrapper .speech-recognition-info-panel,
+.ProseMirror-menubar-wrapper .link-panel,
+.ProseMirror-menubar-wrapper .anchor-panel {
+  z-index: 15;
+  height: auto;
+  overflow: auto;
+  color: var(--hf-pm-panelText-color, #484848);
+  border-radius: 0px 6px 6px 6px;
+  border: 1px solid var(--hf-pm-commonBorder-color, rgb(239, 239, 239));
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1023);
+  top: 33px;
+  position: absolute;
+  background: var(--hf-pm-panelBg-color, #fff);
+  padding: 12px;
+  width: 360px;
+}
+.ProseMirror-menubar-wrapper .speech-recognition-info-panel {
+  width: 240px;
+}
+.ProseMirror-menubar-wrapper .speech-recognition-info-panel .info-title {
+  margin: 0;
+  font-size: 13px;
+  color: var(--hf-pm-panelText-color, #000);
+}
+.ProseMirror-menubar-wrapper .speech-recognition-info-panel .info-content {
+  margin: 0;
+  font-size: 11px;
+  padding-top: 6px;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-panel,
+.ProseMirror-menubar-wrapper .insert-table-panel {
+  right: 0px;
+  border-radius: 6px 0px 6px 6px;
+}
+.ProseMirror-menubar-wrapper .image-upload-form {
+  position: relative;
+}
+.ProseMirror-menubar-wrapper .image-upload-form .drag-and-drop-container {
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+.ProseMirror-menubar-wrapper .image-upload-form .drag-and-drop-container.drag-and-drop-active {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.ProseMirror-menubar-wrapper .image-upload-form .drag-and-drop-container .drag-and-drop-area {
+  z-index: 1;
+  min-height: 100px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+.ProseMirror-menubar-wrapper .image-upload-form .drag-and-drop-container .drag-and-drop-area input {
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.ProseMirror-menubar-wrapper .image-upload-form .drag-and-drop-container .drag-and-drop-area.hide {
+  opacity: 0;
+  position: absolute;
+}
+.ProseMirror-menubar-wrapper .image-upload-form .drag-and-drop-container .images-list-container {
+  min-height: 100px;
+}
+.ProseMirror-menubar-wrapper .image-upload-form .drag-and-drop-container .images-list-container ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  margin: 0;
+}
+.ProseMirror-menubar-wrapper .image-upload-form .drag-and-drop-container .images-list-container ul li {
+  padding: 2px 0;
+  font-size: 13px;
+}
+.ProseMirror-menubar-wrapper .image-upload-form .drag-and-drop-container .images-list-container ul li button {
+  background: none;
+  border: 0;
+  margin-left: 5px;
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ProseMirror-menubar-wrapper .image-upload-form .drag-and-drop-container .images-list-container ul li button:hover {
+  background-color: var(--hf-pm-secondaryButtonBg-color, rgb(246, 246, 246));
+}
+.ProseMirror-menubar-wrapper .image-upload-form .drag-and-drop-container .images-list-container.hide {
+  opacity: 0;
+  position: absolute;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-input,
+.ProseMirror-menubar-wrapper .table-select,
+.ProseMirror-menubar-wrapper .table-input,
+.ProseMirror-menubar-wrapper .image-input,
+.ProseMirror-menubar-wrapper .link-input,
+.ProseMirror-menubar-wrapper .link-select,
+.ProseMirror-menubar-wrapper .link-textarea,
+.ProseMirror-menubar-wrapper .anchor-input,
+.ProseMirror-menubar-wrapper .modal-input {
+  border-radius: 4px;
+  border: 1px solid var(--hf-pm-commonBorder-color, rgb(199, 199, 199));
+  opacity: 1;
+  background-color: var(--hf-pm-fieldBg-color, rgb(255, 255, 255));
+  padding: 5px 10px;
+  width: 100%;
+  outline: none;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+.ProseMirror-menubar-wrapper .link-select {
+  padding: 4px 0 4px 6px;
+}
+.ProseMirror-menubar-wrapper .image-input.url-field {
+  width: 100%;
+}
+.ProseMirror-menubar-wrapper .hf-editor-primary-button,
+.ProseMirror-menubar-wrapper .insert-button {
+  border-radius: 4px;
+  background-color: var(--hf-pm-primary-color);
+  border: none;
+  color: #fff;
+  padding: 5px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  outline: none;
+}
+.ProseMirror-menubar-wrapper .hf-editor-primary-button:hover, .ProseMirror-menubar-wrapper .hf-editor-primary-button:focus,
+.ProseMirror-menubar-wrapper .insert-button:hover,
+.ProseMirror-menubar-wrapper .insert-button:focus {
+  background-color: var(--hf-pm-primaryHover-color);
+}
+.ProseMirror-menubar-wrapper .hf-editor-secondary-button,
+.ProseMirror-menubar-wrapper .cancel-button,
+.ProseMirror-menubar-wrapper .browse-button {
+  border-radius: 4px;
+  background-color: var(--hf-pm-secondaryButtonBg-color, rgb(246, 246, 246));
+  border: none;
+  color: var(--hf-pm-secondaryButtonText-color, #000);
+  padding: 5px 20px;
+  cursor: pointer;
+  outline: none;
+}
+.ProseMirror-menubar-wrapper .btn-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.ProseMirror-menubar-wrapper .divider,
+.ProseMirror-menubar-wrapper .or-divider {
+  margin-bottom: 10px;
+  text-align: center;
+  position: relative;
+}
+.ProseMirror-menubar-wrapper .divider::before,
+.ProseMirror-menubar-wrapper .or-divider::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid var(--hf-pm-commonBorder-color, #e8e8e8);
+  position: absolute;
+  left: 0px;
+  top: 10px;
+}
+.ProseMirror-menubar-wrapper .divider span,
+.ProseMirror-menubar-wrapper .or-divider span {
+  background: var(--hf-pm-panelBg-color, white);
+  padding: 0 8px;
+  color: var(--hf-pm-panelText-color, #757575);
+  font-size: 14px;
+  position: relative;
+}
+.ProseMirror-menubar-wrapper .divider .divider-content-left {
+  padding: 0 8px 0 0;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-wrap.ProseMirror-menu-disabled .ProseMirror-menu-dropdown {
+  cursor: not-allowed;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-wrap.ProseMirror-menu-disabled:hover {
+  border-radius: 0px;
+  border: 1px solid transparent;
+  box-shadow: none;
+  background-color: inherit;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-wrap.ProseMirror-menu-disabled .ProseMirror-menu-dropdown-menu {
+  display: none;
+}
+.ProseMirror-menubar-wrapper .font-color-panel,
+.ProseMirror-menubar-wrapper .font-background-panel,
+.ProseMirror-menubar-wrapper .emoji-panel {
+  z-index: 15;
+  color: var(--hf-pm-panelText-color, #484848);
+  border-radius: 0px 6px 6px 6px;
+  border: 1px solid var(--hf-pm-commonBorder-color, rgb(239, 239, 239));
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1023);
+  top: 33px;
+  position: absolute;
+  background: var(--hf-pm-panelBg-color, #fff);
+  padding: 12px;
+}
+.ProseMirror-menubar-wrapper .floating-menu-panel {
+  z-index: 15;
+  color: var(--hf-pm-panelText-color, #484848);
+  border-radius: 6px;
+  border: 1px solid var(--hf-pm-commonBorder-color, #e3e3e3);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  top: 33px;
+  position: absolute;
+  background: var(--hf-pm-panelBg-color, #fff);
+  padding: 0px 3px;
+}
+.ProseMirror-menubar-wrapper .floating-menu-panel .ProseMirror-menuitem {
+  height: 34px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper {
+  padding: 0px;
+  width: 180px;
+  background: var(--hf-pm-panelBg-color, #fff);
+  box-shadow: none;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .picker_hue.picker_slider {
+  margin: 0px;
+  border-radius: 6px 6px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px inset;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_sl {
+  width: 180px;
+  height: 75px;
+  margin: 0px;
+  border-radius: 0px 0px 6px 6px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px inset;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_sample {
+  margin: 10px 0px 0px 10px;
+  border-radius: 4px;
+  box-shadow: none;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_sample::before {
+  border-radius: 4px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_editor {
+  margin: 10px 0px 0px;
+  width: 125px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_editor input {
+  border-radius: 4px;
+  border: 1px solid var(--hf-pm-commonBorder-color, rgb(199, 199, 199));
+  opacity: 1;
+  background-color: var(--hf-pm-fieldBg-color, rgb(255, 255, 255));
+  box-shadow: none;
+  padding: 5px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_done,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_cancel {
+  margin: 8px 0px 0px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_done button,
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_cancel button {
+  border-radius: 4px;
+  border: none;
+  padding: 6px 22px;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_done button {
+  background: var(--hf-pm-primary-color);
+  color: #fff;
+  margin-right: 10px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_done button:hover, .ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_done button:focus {
+  background-color: var(--hf-pm-primaryHover-color);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_selector {
+  padding: 8px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_cancel button {
+  background: var(--hf-pm-secondaryButtonBg-color, #f6f6f6);
+  color: var(--hf-pm-secondaryButtonText-color, #666);
+  margin: 0px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .layout_default.picker_wrapper .picker_sl::before {
+  padding-bottom: inherit;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .panel-opened {
+  border-radius: 6px 6px 0px 0px !important;
+  border: 1px solid var(--hf-pm-toolbarHoverBorder-color, rgb(239, 239, 239));
+  box-shadow: var(--hf-pm-toolbarHoverShadow-color, 0px 4px 16px rgba(0, 0, 0, 0.1023));
+  background-color: var(--hf-pm-toolbarHoverBg-color, rgb(255, 255, 255));
+}
+.ProseMirror-menubar-wrapper code {
+  font-family: monospace;
+}
+.ProseMirror-menubar-wrapper .ProseMirror table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* TODO: yet to decide
+  // Reset P styles inside table
+  p,
+  p:first-child {
+    padding: 0;
+    margin: revert;
+  } */
+}
+.ProseMirror-menubar-wrapper .ProseMirror table td,
+.ProseMirror-menubar-wrapper .ProseMirror table th {
+  position: relative;
+}
+.ProseMirror-menubar-wrapper .ProseMirror table[border="0"], .ProseMirror-menubar-wrapper .ProseMirror table:not([border]) {
+  border: #d3d3d3 1px dotted;
+}
+.ProseMirror-menubar-wrapper .ProseMirror table[border="0"] tr td,
+.ProseMirror-menubar-wrapper .ProseMirror table[border="0"] tr th, .ProseMirror-menubar-wrapper .ProseMirror table:not([border]) tr td,
+.ProseMirror-menubar-wrapper .ProseMirror table:not([border]) tr th {
+  border: #d3d3d3 1px dotted;
+}
+.ProseMirror-menubar-wrapper .ProseMirror table[border="0"] tbody tr td,
+.ProseMirror-menubar-wrapper .ProseMirror table[border="0"] tbody tr th, .ProseMirror-menubar-wrapper .ProseMirror table:not([border]) tbody tr td,
+.ProseMirror-menubar-wrapper .ProseMirror table:not([border]) tbody tr th {
+  border: #d3d3d3 1px dotted;
+}
+.ProseMirror-menubar-wrapper .ProseMirror table[border="0"] thead tr td,
+.ProseMirror-menubar-wrapper .ProseMirror table[border="0"] thead tr th, .ProseMirror-menubar-wrapper .ProseMirror table:not([border]) thead tr td,
+.ProseMirror-menubar-wrapper .ProseMirror table:not([border]) thead tr th {
+  border: #d3d3d3 1px dotted;
+}
+.ProseMirror-menubar-wrapper .ProseMirror table[border="0"] tfoot tr td,
+.ProseMirror-menubar-wrapper .ProseMirror table[border="0"] tfoot tr th, .ProseMirror-menubar-wrapper .ProseMirror table:not([border]) tfoot tr td,
+.ProseMirror-menubar-wrapper .ProseMirror table:not([border]) tfoot tr th {
+  border: #d3d3d3 1px dotted;
+}
+.ProseMirror-menubar-wrapper .ProseMirror .column-resize-handle {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  z-index: 20;
+  background-color: #adf;
+  pointer-events: none;
+}
+.ProseMirror-menubar-wrapper .ProseMirror.resize-cursor {
+  cursor: ew-resize;
+  cursor: col-resize;
+}
+.ProseMirror-menubar-wrapper .ProseMirror .selectedCell:after {
+  z-index: 2;
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(200, 200, 255, 0.4);
+  pointer-events: none;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-example-setup-style pre code {
+  background-color: inherit;
+  border: none;
+  border-radius: 0;
+}
+.ProseMirror-menubar-wrapper .ProseMirror {
+  padding: 5px 15px;
+  background: var(--hf-pm-bg-color, #fff);
+  color: var(--hf-pm-text-color, #000);
+}
+.ProseMirror-menubar-wrapper .source-code-field,
+.ProseMirror-menubar-wrapper .markdown-field {
+  width: 100%;
+  overflow: auto;
+  position: relative;
+  border: 1px solid var(--hf-pm-commonBorder-color, #eeeeee);
+  resize: none;
+  outline: none;
+  text-align: left;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top: none;
+  display: flex;
+  flex: 1;
+  background: var(--hf-pm-bg-color, #fff);
+  color: var(--hf-pm-text-color, #000);
+}
+.ProseMirror-menubar-wrapper .markdown-field .cm-gutters {
+  background: var(--hf-pm-panelBg-color, #f5f5f5);
+  color: var(--hf-pm-panelText-color, #6c6c6c);
+  border-right-color: var(--hf-pm-commonBorder-color, #ddd);
+}
+.ProseMirror-menubar-wrapper .markdown-field .cm-gutters .cm-activeLineGutter {
+  background-color: var(--hf-pm-toolbarHoverBg-color, #e2f2ff);
+}
+.ProseMirror-menubar-wrapper .markdown-field .ͼ5 {
+  color: var(--hf-pm-text-color, #404740);
+}
+.ProseMirror-menubar-wrapper .markdown-field > div {
+  width: 100%;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-wrap:has(.ProseMirror-menu-dropdown-menu) .ProseMirror-menu-dropdown {
+  border-radius: 6px 6px 0px 0px !important;
+  border: 1px solid var(--hf-pm-toolbarHoverBorder-color, rgb(239, 239, 239));
+  box-shadow: var(--hf-pm-toolbarHoverShadow-color, 0px 4px 16px rgba(0, 0, 0, 0.1023));
+  background-color: var(--hf-pm-toolbarHoverBg-color, rgb(255, 255, 255));
+}
+.ProseMirror-menubar-wrapper.full-screen-enabled {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: var(--hf-pm-bg-color, #fff);
+}
+.ProseMirror-menubar-wrapper.full-screen-enabled .ProseMirror-example-setup-style {
+  height: calc(100vh - 54px);
+  max-height: 100%;
+  border-radius: 0px;
+}
+.ProseMirror-menubar-wrapper.full-screen-enabled .ProseMirror-menubar {
+  border-radius: 0px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menuitem .picker_wrapper .picker_cancel button:hover {
+  background: var(--hf-pm-secondaryButtonBg-color, #f6f6f6);
+  color: var(--hf-pm-secondaryButtonText-color, #666);
+}
+.ProseMirror-menubar-wrapper .badge-button {
+  top: 10px;
+  position: relative;
+}
+.ProseMirror-menubar-wrapper ul {
+  list-style-type: disc;
+}
+.ProseMirror-menubar-wrapper ol {
+  list-style-type: decimal;
+}
+.ProseMirror-menubar-wrapper a[name] {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADdElEQVR4Ae2ay2sUQRCHKyY+QHzEtxLJJgriSRQVNTESwYP+AYI5+bgJnnLz6DEHTx48iAYkIMaTQg6C5CAYBVEMPkAvioJgYoyJ+M7Gr5dsmJntWWd3JuOsXQXFVFV3dVf9uqaTnW4RJUVAEVAEHEagLuncp0V8Y6Jgyi75grWEadpDExgSydF+mQ7tPOfD5ciM4+Vf6GNMMIrxCfKdKZFb+0U+lRsk6bYwANYyUR98AH4Fn4LJ10/3CBrLQb81ljaJ98UFIj07ASbWSBGdwwC4gv9xzxivkVs8ekEEgO8IC4P2BPQRquJ0m8iNBMYqO8S8kNYdAXsOvTFgM+rfyt7iEsm0mpXpB+C++yJLI3lU2SkMAFtiNluV00Z268qLDAPCocgeFXYMA6DCYea0ezMg3KYaBtiEDj8TYYuIToMiix6WqdSwPeA5U2wNTGM2xg9eG0GxcUvaIH4l6GH2CBPjC+RRAPqC/A3ZvC4reK6jfRvydrgJnsDWvVfkErKPsFspywBYA45gnGKlcntE3nn7pr163rnTluupClMRPnIJAPNfWIMvexSnAAgmb3QFwIaKSzatAJdW25arVoANFZdsWgEurbYtV60AGyou2bQCXFptW65aATZUXLJpBbi02rZctQJsqLhk0wqIudo/Yvr/c/e4FWBOh2uaYgHwW+QkJyvXQGCsVlEo+U5eSSIdIiP0P2Z8OH9b9lOklW/vrYDSUnzStApeDpvTZfOshzNDsQDwZsGFhs/oj2fY2zQrA0rdA5ElHCg2UnoraWjiXK8NwLqMPNsxRSExAKLETKJgIBMz/IbnI/jmdZGzG0VO0HgOfT2cGsXaA5KK8iinzObklmrYAgjnGZe3KXli/PHgqJkAoBhUu8gk12K6CWoTtguwuYKTFL3nVlbJPadMAVDM1Bxh7xM5w/tpNtMe7OZ1qZbyvHoDOHd0WgClzUqR7gdYPefIeJcLD6wWBSK74M1wM8Fv4FnyVwXQ3tL2lLYhQOzdjY5spZoBwBb9IMfdi9k0SbiB93uavy55Eh6ngsxGG4tMBTCuj9fEGjGjzpncA9LESgFIE+0szqUVkMVVSTMmrYA00c7iXFoBIavyMWDn40/h937AXPtqWAVcDaTWj17zH0ADORXUsN8CpvEI3Am/hHthfk0qKQKKgCKgCPxXCPwB7aWXmv7ff8UAAAAASUVORK5CYII=) no-repeat left center;
+  border: 1px dotted #00f;
+  background-size: 16px;
+  padding-left: 18px;
+  cursor: auto;
+}
+.ProseMirror-menubar-wrapper a {
+  color: #08c;
+}
+.ProseMirror-menubar-wrapper .format-menu p,
+.ProseMirror-menubar-wrapper .format-menu h1,
+.ProseMirror-menubar-wrapper .format-menu h2,
+.ProseMirror-menubar-wrapper .format-menu h3,
+.ProseMirror-menubar-wrapper .format-menu h4,
+.ProseMirror-menubar-wrapper .format-menu h5,
+.ProseMirror-menubar-wrapper .format-menu h6,
+.ProseMirror-menubar-wrapper .format-menu pre {
+  margin: 0px;
+  padding: 6px 7px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror .imagePluginRoot.upload-in-progress {
+  opacity: 0.5;
+  border: 1px solid;
+  pointer-events: none;
+}
+.ProseMirror-menubar-wrapper .ProseMirror .imagePluginRoot.upload-in-progress .imageResizeBoxWrapper {
+  display: none;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-panel,
+.ProseMirror-menubar-wrapper .insert-table-panel {
+  width: 250px;
+  max-height: unset;
+}
+.ProseMirror-menubar-wrapper .insert-table-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ProseMirror-menubar-wrapper .insert-table-form .form-field-wrapper {
+  flex-basis: 45%;
+}
+.ProseMirror-menubar-wrapper .insert-table-form .form-field-wrapper label {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+.ProseMirror-menubar-wrapper .insert-table-form .caption-field-wrapper,
+.ProseMirror-menubar-wrapper .insert-table-form .summary-field-wrapper,
+.ProseMirror-menubar-wrapper .insert-table-form .border-field-wrapper {
+  flex-basis: 100%;
+}
+.ProseMirror-menubar-wrapper .insert-table-form .caption-field,
+.ProseMirror-menubar-wrapper .insert-table-form .summary-field {
+  width: unset;
+}
+.ProseMirror-menubar-wrapper .link-panel .link-type-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-panel .form-field-label,
+.ProseMirror-menubar-wrapper .modal .form-field-label,
+.ProseMirror-menubar-wrapper .link-panel .form-field-label {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.ProseMirror-menubar-wrapper .link-panel .link-to-anchor-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.ProseMirror-menubar-wrapper .link-panel .link-to-anchor-wrapper .form-field-wrapper {
+  flex-basis: 40%;
+}
+.ProseMirror-menubar-wrapper .link-panel .link-to-anchor-wrapper .no-anchors-message {
+  text-align: center;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.ProseMirror-menubar-wrapper .flex-wrapper {
+  display: flex;
+}
+.ProseMirror-menubar-wrapper .form-field-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.ProseMirror-menubar-wrapper .link-panel .link-type-text-wrapper {
+  display: flex;
+  gap: 5px;
+}
+.ProseMirror-menubar-wrapper .link-panel .link-type-text-wrapper .link-type-wrapper {
+  max-width: max-content;
+}
+.ProseMirror-menubar-wrapper .link-panel .link-type-text-wrapper .display-text-field-wrapper {
+  flex-grow: 1;
+}
+.ProseMirror-menubar-wrapper .link-panel .link-to-url-wrapper .protocol-url-wrapper {
+  display: flex;
+  gap: 5px;
+}
+.ProseMirror-menubar-wrapper .link-panel .link-to-url-wrapper .form-field-wrapper.url-field-wrapper {
+  flex-grow: 1;
+}
+.ProseMirror-menubar-wrapper .link-panel .link-to-url-wrapper .url-protocol-field {
+  width: max-content;
+  padding-right: 0px;
+}
+.ProseMirror-menubar-wrapper .link-panel .link-target-field-wrapper {
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+.ProseMirror-menubar-wrapper .link-panel .link-target-field-wrapper .form-field-label {
+  margin-bottom: 0;
+}
+.ProseMirror-menubar-wrapper .link-panel form[data-no-anchors=true] .insert-button,
+.ProseMirror-menubar-wrapper .link-panel .cancel-button {
+  display: none;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-panel .checkbox-field-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 5px;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-panel .checkbox-field-wrapper .form-field-label {
+  width: auto;
+  margin: unset;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-panel .checkbox-field-wrapper .find-and-replace-input {
+  width: auto;
+  margin: 5px;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-panel .find-field-wrapper {
+  display: flex;
+  margin-bottom: 10px;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-panel .find-field-wrapper .find-and-replace-input {
+  margin: unset;
+  border-top-right-radius: unset;
+  border-bottom-right-radius: unset;
+  flex-grow: 1;
+  width: auto;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-panel .find-field-wrapper .hf-editor-primary-button {
+  border-bottom-left-radius: unset;
+  border-top-left-radius: unset;
+  margin-right: unset;
+  padding: 5px 10px;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-panel .replace-button-wrapper {
+  margin-top: 10px;
+}
+.ProseMirror-menubar-wrapper .find-and-replace-panel .replace-button-wrapper .hf-editor-secondary-button {
+  margin-right: 10px;
+}
+.ProseMirror-menubar-wrapper .code-snippet {
+  width: 100%;
+  display: inline-block;
+  padding: 0.5em;
+  font-size: 16px;
+}
+.ProseMirror-menubar-wrapper .hljs {
+  color: black !important;
+}
+.ProseMirror-menubar-wrapper .modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 2;
+  background-color: rgba(10, 10, 10, 0.6);
+}
+.ProseMirror-menubar-wrapper .modal p {
+  color: var(--hf-pm-panelText-color, #000);
+}
+.ProseMirror-menubar-wrapper .modal select,
+.ProseMirror-menubar-wrapper .modal textarea {
+  background-color: var(--hf-pm-fieldBg-color, rgb(255, 255, 255));
+  color: var(--hf-pm-fieldLabel-color, #000);
+  border-color: var(--hf-pm-commonBorder-color, rgb(199, 199, 199));
+}
+.ProseMirror-menubar-wrapper .modal select:focus,
+.ProseMirror-menubar-wrapper .modal textarea:focus {
+  border-color: var(--hf-pm-fieldBorder-color, rgb(199, 199, 199));
+}
+.ProseMirror-menubar-wrapper #image-properties-modal .modal-content {
+  width: 270px;
+}
+.ProseMirror-menubar-wrapper #image-properties-modal .modal-content .modal-body {
+  padding: 9px 16px 5px 16px;
+}
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-dimension-field {
+  gap: 5px;
+  align-items: center;
+}
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-dimension-field .reset-dimensions {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH4AsCDSEAgw7OCAAABVtJREFUWMOdV02IHEUU/t6r3v6bn0QiYXJI3B9c9bABT5t4VJndDWwO6hJyydGjeDAe/LkIwYN4yMGDIF4VzGkJ7EDMwVOCB00gRBQXjYSNkDVMhp6Z7umuLg8z1Vtd0xNCCprurq6q9973vvfThGcYa2trxTMRFXfzAgClFPI8h1IKnU6n8ix+FgVmDaVUIVRfSikQETY3N7G1tTW1RzzNoYuLi1heXsb8/DwWFhaQ53nJ+jzPX2bmr9I0vcLMpb16XZ7nSJIES0tL2N3dPUDwaWEWQkAIgTzPIaUsDgcAZn5eSvlQCPFwOBwe9TzviUYREXZ2dqoVOHv27BSMepO2TkOrR71ed6MoSvQ6IppXSt2bJZyZIYSA53llDpw5cwZSykKoCbNJKHvs7++PLB78rZT6TK+v2qMVKRRYX18vCanapJRCkiSIoggAjgM47TgODwaDAhnD958KIe5XCdYXM49dsLm5iSzLKgXquxAizLLsWyHEORMhcy0RFcozczHned5LSZL8YcI/NzeHRqMxRkAvNCAsrn6/D2b+McuyPhGd0wS0Ly1cCzHn4jj+XQjxnZSy+D43N4cgCMDr6+tTvtWHrq6uzoVhqKSUb5iIzCLXk+aklPVutwsABQK1Wg2O6TtTyKlTp/jGjRsjPOWw/G/PrRLRz0eOHCn8r6PAqbIsjmPcvHlT2gKMJHMdwBVmvpfn+QkAFwC8VoFA2u123cOHD09xhZnhOA4cG3oA8DzvB1spZgYR/RlF0Yu1Wq1kYZIkX3uepywlv1dKnbeFm5whoulasLe3B6XUOxXIfDQajV6s1+tTRefixYusmT8ZbQDnTS7Y+aQ4Y21tzU6rl6WU71l63c+y7LjruqVsqEcQBM/1+/1HzIzbt2/TyZMnMUu4PUftdtsGQZkKTQoJMXMRw8xc5I0JnK9IKX8CcNRkvu1Gu3QDVjk2w1FbKKX81UwwSqkxeRynUObu3bu/EdFRywrbsMq5kgKtVqsozxpqx3G2TQWllBBCIAgC+L4P13WxsrKiSTqVxmeldY2EozcBwP7+/glz4wT+PRslIkKj0YCUElmWIY5jJEmC0WhUnCWEeFsp9S4RPQYglFLHDh069Gav1xuU6oHpj06n85ep8eR5yda81+vB9300m000m03U6/WpKppl2QUpZVtKuSWlfCvP89N37twZmNYLIUAbGxuF7weDAXzfL+FFRP8qpY5VEahWq2E0GiHLshJHqsjMzIjjmIIggBACjuPAdd0DDiilEATBVE5XSrVc123aZJJSotfrIUmSqRIehuGi7Xel1H++75fIWK/XwWbXMznkC/2u72maPpZSVpLKropxHKPf7+/CGsz8udm0pmk6Lsd2zEdR9KHu/Zi5aMscx7luQ21xBVJKuK77ix3KANDtdr+0k1IYhmMXmB8ajQaY+Rsdhjq8pJSvCyGU67ovVIVUGIYrzKyI6FUdWbovAHCp2WyWDCWisct192taMxqN4DjOzOI/EbAD4B8iWsA49081NpPnJI5jX/PL7IquXr06zgP2cF0XDx48oFarpZ6Q0TZMxa1vpmt83/fLfaCdinWeN0er1UKSJGT8fBR3m6QzUEp1DTGICCEEXNc9UKDT6RTC7Vj3fR/D4ZCI6LLJCe1bk6Sm9UR0aTgcukIc/HiZpPU8D9vb22UETP+aSoRhCADvR1FEQoiPAURmw6mtyvP8kRDiA4x/dj4Jw7BQ1kQxz3MEQXAgTz/ojGgqoWO2iqRKKSwvL4e3bt0ahGEI83fM9rcWrs+4du3atAIA0G63ixJr/p6Zwu1o0Hdzndl4CiGK72maloQDwP9CetQcvrEJngAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNi0xMS0wMlQxMzozMzowMCswMTowMNcBrO0AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTYtMTEtMDJUMTM6MzM6MDArMDE6MDCmXBRRAAAAAElFTkSuQmCC");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: 16px;
+  height: 16px;
+  width: 16px;
+  margin: 6px 5px 0 6px;
+}
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-dimension-field .reset-dimensions.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-aligment-field,
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-captioned-field {
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-aligment-field .flex-wrapper,
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-captioned-field .flex-wrapper {
+  gap: 5px;
+}
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-aligment-field input[type=radio],
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-aligment-field input[type=checkbox],
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-aligment-field label,
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-captioned-field input[type=radio],
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-captioned-field input[type=checkbox],
+.ProseMirror-menubar-wrapper #image-properties-modal .image-prop-captioned-field label {
+  margin: 0;
+}
+.ProseMirror-menubar-wrapper .modal-content {
+  border-radius: 6px;
+  background-color: var(--hf-pm-panelBg-color, #fefefe);
+  margin: auto;
+  width: auto;
+  height: auto;
+  display: table;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 490px;
+}
+.ProseMirror-menubar-wrapper .modal-input:disabled {
+  opacity: 0.5;
+}
+.ProseMirror-menubar-wrapper .code-snippet-field {
+  cursor: auto;
+  width: 800px;
+  height: 446px;
+  tab-size: 4;
+  text-align: left;
+  border: 1px solid;
+  padding: 4px 6px;
+  outline: 0;
+  border-radius: 2px;
+  min-height: 28px;
+  margin-left: 1px;
+  overflow: auto;
+  resize: none;
+  font-family: "Courier New", Monospace;
+  font-size: small;
+}
+.ProseMirror-menubar-wrapper .code-language {
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid;
+  padding: 3px;
+  outline: 0;
+  border-radius: 2px;
+  margin: 0 1px;
+}
+.ProseMirror-menubar-wrapper .modal-section {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.ProseMirror-menubar-wrapper .modal-section p {
+  margin: 0;
+  font-size: 13px;
+  padding-bottom: 2px;
+}
+.ProseMirror-menubar-wrapper .modal .title-wrapper {
+  font-size: 16px;
+  position: relative;
+  color: var(--hf-pm-panelBg-color, #000);
+  border-bottom: 1px solid var(--hf-pm-commonBorder-color, #d1d1d1);
+  padding: 12px 19px 12px 12px;
+  letter-spacing: 0.3px;
+}
+.ProseMirror-menubar-wrapper .modal .title-wrapper p {
+  margin: 0;
+}
+.ProseMirror-menubar-wrapper .modal .close {
+  right: 18px;
+  scale: 1.3;
+  padding: 0 4px;
+  position: absolute;
+  cursor: pointer;
+  top: 13px;
+  z-index: 5;
+}
+.ProseMirror-menubar-wrapper .modal-body {
+  padding: 9px 10px 5px 10px;
+}
+.ProseMirror-menubar-wrapper .modal-footer {
+  text-align: right;
+  position: relative;
+  padding: 2px 16px 12px;
+}
+.ProseMirror-menubar-wrapper .modal-btn {
+  padding: 5px 20px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  line-height: 18px;
+  font-size: 13px;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+.ProseMirror-menubar-wrapper .modal-btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.ProseMirror-menubar-wrapper .confirmation-ok-btn,
+.ProseMirror-menubar-wrapper .code-snippet-ok-btn {
+  color: #fff;
+  background: var(--hf-pm-primary-color);
+  border-radius: 4px;
+  border: none;
+  margin-left: 6px;
+}
+.ProseMirror-menubar-wrapper .confirmation-ok-btn:disabled,
+.ProseMirror-menubar-wrapper .code-snippet-ok-btn:disabled {
+  color: #fff;
+}
+.ProseMirror-menubar-wrapper .confirmation-ok-btn:hover, .ProseMirror-menubar-wrapper .confirmation-ok-btn:focus,
+.ProseMirror-menubar-wrapper .code-snippet-ok-btn:hover,
+.ProseMirror-menubar-wrapper .code-snippet-ok-btn:focus {
+  background-color: var(--hf-pm-primaryHover-color);
+}
+.ProseMirror-menubar-wrapper .confirmation-cancel-btn,
+.ProseMirror-menubar-wrapper .code-snippet-cancel-btn {
+  color: var(--hf-pm-secondaryButtonText-color, #000);
+  background-color: var(--hf-pm-secondaryButtonBg-color, rgb(246, 246, 246));
+  border: none;
+}
+.ProseMirror-menubar-wrapper emoji-picker {
+  height: 250px;
+}
+.ProseMirror-menubar-wrapper emoji-picker {
+  --input-font-size: 14px;
+  --input-border-radius: 4px;
+  --input-padding: 5px 10px;
+  --input-placeholder-color: #757575;
+  --input-line-height: 1.3;
+  --outline-size: 0px;
+  --background: var(--hf-pm-panelBg-color, #fff);
+  --border-color: var(--hf-pm-commonBorder-color, #e0e0e0);
+  --input-border-color: var(--hf-pm-commonBorder-color, rgba(199, 199, 199, 1));
+  --input-font-color: var(--hf-pm-fieldLabel-color, #111);
+  --button-hover-background: var(--hf-pm-toolbarHoverBg-color, #d9d9d9);
+  --button-active-background: var(--hf-pm-toolbarHoverBg-color, #e6e6e6);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-menu.styles-menu {
+  padding: 0px;
+}
+.ProseMirror-menubar-wrapper .styles-menu .ProseMirror-menu-dropdown-item {
+  padding: 6px 7px;
+}
+.ProseMirror-menubar-wrapper .styles-menu .ProseMirror-menu-dropdown-item:nth-child(1),
+.ProseMirror-menubar-wrapper .styles-menu .ProseMirror-menu-dropdown-item:nth-child(5) {
+  padding: 0px;
+}
+.ProseMirror-menubar-wrapper .styles-menu h3,
+.ProseMirror-menubar-wrapper .styles-menu h2,
+.ProseMirror-menubar-wrapper .styles-menu p {
+  margin: 0px;
+}
+.ProseMirror-menubar-wrapper .styles-menu .styles-menu-subheading {
+  cursor: default;
+  font-size: 11px;
+  font-weight: bold;
+  white-space: nowrap;
+  margin: 0;
+  padding: 6px 6px 7px 6px;
+  color: var(--hf-pm-toolbarTextAndIcon-color, #484848);
+  border-bottom: 1px solid var(--hf-pm-commonBorder-color, #d1d1d1);
+  background: var(--hf-pm-bg-color, #f8f8f8);
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-item:has(.table-menu-separator) {
+  border-bottom: 1px solid #d1d1d1;
+}
+.ProseMirror-menubar-wrapper .hf-editor-u-hide {
+  display: none !important;
+}
+.ProseMirror-menubar-wrapper .hf-editor-u-text-align-left {
+  text-align: left;
+}
+.ProseMirror-menubar-wrapper .hf-inactive-find-highlight {
+  background-color: rgba(255, 208, 7, 0.3411764706);
+}
+.ProseMirror-menubar-wrapper .hf-active-find-highlight {
+  background-color: #ffd005;
+}
+.ProseMirror-menubar-wrapper .ProseMirror-menu-dropdown-menu {
+  font-size: 80%;
+}
+.ProseMirror-menubar-wrapper div[data-oembed-url] {
+  position: relative;
+}
+.ProseMirror-menubar-wrapper div[data-oembed-url]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ProseMirror-menubar-wrapper .source-code-menu .ProseMirror-menu-text {
+  padding-left: 1px;
+}
+.ProseMirror-menubar-wrapper .source-code-menu svg {
+  position: relative;
+  bottom: 1px;
+}
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu {
+  flex-direction: column-reverse;
+}
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-example-setup-style {
+  border-radius: 6px 6px 0px 0px;
+}
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menubar {
+  border-radius: 0px 0px 6px 6px;
+}
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .ProseMirror-menu-dropdown-wrap:has(.ProseMirror-menu-dropdown-menu) .ProseMirror-menu-dropdown,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .ProseMirror-icon.panel-opened {
+  border-radius: 0px 0px 6px 6px !important;
+  box-shadow: 0px -4px 16px rgba(0, 0, 0, 0.1023);
+}
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .ProseMirror-menu-dropdown::after {
+  border-top: inherit;
+  border-bottom: 4px solid var(--hf-pm-toolbarTextAndIcon-color, #000);
+}
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .ProseMirror-menu-dropdown-menu,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .anchor-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .emoji-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .find-and-replace-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .font-color-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .font-background-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .insert-table-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .insert-image-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .speech-recognition-info-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .link-panel {
+  border-radius: 6px 6px 6px 0px;
+  box-shadow: 0px -4px 16px rgba(0, 0, 0, 0.1023);
+  top: inherit;
+}
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .find-and-replace-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .insert-table-panel {
+  border-radius: 6px 6px 0px 6px;
+}
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .anchor-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .emoji-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .find-and-replace-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .font-color-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .font-background-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .insert-table-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .insert-image-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .speech-recognition-info-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .link-panel {
+  bottom: 33px;
+}
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .ProseMirror-menu-dropdown-menu {
+  bottom: 24px;
+}
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .floating-menu-panel {
+  top: -33px;
+}
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .floating-menu-panel .font-color-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .floating-menu-panel .font-background-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .floating-menu-panel .insert-image-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .floating-menu-panel .speech-recognition-info-panel,
+.ProseMirror-menubar-wrapper.hf-editor-bottom-menu .ProseMirror-menuitem .floating-menu-panel .link-panel {
+  bottom: 31px;
+}
+.ProseMirror-menubar-wrapper .ProseMirror .selection-marker {
+  background-color: yellow;
+}
+.ProseMirror-menubar-wrapper .empty-menu {
+  width: 28px;
+  height: 30.8px;
+}
+.ProseMirror-menubar-wrapper .empty-menu:hover {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: transparent;
+  background-color: transparent;
+}
+.ProseMirror-menubar-wrapper .auto-suggest::after {
+  content: "" attr(aiSuggestedText);
+  opacity: 0.4;
+}
+.ProseMirror-menubar-wrapper .to-default-color-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--hf-pm-toolbarHoverBg-color, #f6f6f6);
+  color: var(--hf-pm-secondaryButtonText-color, #000);
+  border: 0;
+  padding: 6px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+.ProseMirror-menubar-wrapper .to-default-color-button span:first-child {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border: 1px solid var(--hf-pm-commonBorder-color, #000);
+}
+.ProseMirror-menubar-wrapper.menu-grouping .ProseMirror.ProseMirror-example-setup-style {
+  padding-top: 0;
+  margin-top: 28px;
+}
+.ProseMirror-menubar-wrapper.menu-grouping .ProseMirror.ProseMirror-example-setup-style p:first-child,
+.ProseMirror-menubar-wrapper.menu-grouping .ProseMirror.ProseMirror-example-setup-style h1:first-child,
+.ProseMirror-menubar-wrapper.menu-grouping .ProseMirror.ProseMirror-example-setup-style h2:first-child,
+.ProseMirror-menubar-wrapper.menu-grouping .ProseMirror.ProseMirror-example-setup-style h3:first-child,
+.ProseMirror-menubar-wrapper.menu-grouping .ProseMirror.ProseMirror-example-setup-style h4:first-child,
+.ProseMirror-menubar-wrapper.menu-grouping .ProseMirror.ProseMirror-example-setup-style h5:first-child,
+.ProseMirror-menubar-wrapper.menu-grouping .ProseMirror.ProseMirror-example-setup-style h6:first-child,
+.ProseMirror-menubar-wrapper.menu-grouping .ProseMirror.ProseMirror-example-setup-style ol:first-child,
+.ProseMirror-menubar-wrapper.menu-grouping .ProseMirror.ProseMirror-example-setup-style ul:first-child {
+  margin-top: 0;
+}
+.ProseMirror-menubar-wrapper .image-plugin-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.ProseMirror-disabled .ProseMirror-menubar-wrapper .ProseMirror-menubar {
+  pointer-events: none;
+}
+.ProseMirror-disabled .ProseMirror-menubar-wrapper .ProseMirror-menubar .ProseMirror-menuitem .ProseMirror-icon:not(.ProseMirror-menu-disabled),
+.ProseMirror-disabled .ProseMirror-menubar-wrapper .ProseMirror-menubar .ProseMirror-menu-dropdown-wrap,
+.ProseMirror-disabled .ProseMirror-menubar-wrapper .ProseMirror-menubar .ProseMirror-menu-icon-text {
+  opacity: 0.3;
+}
+.ProseMirror-disabled .ProseMirror-menubar-wrapper .ProseMirror-example-setup-style {
+  user-select: none;
+}
+
+.ProseMirror-mentions-list-container {
+  max-height: 200px;
+  overflow: auto;
+  position: relative;
+  background: var(--hf-pm-panelBg-color, #fff);
+  color: var(--hf-pm-panelText-color, #000);
+  font-size: 0.9rem;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.0509803922), 0 10px 20px rgba(0, 0, 0, 0.1019607843);
+}
+.ProseMirror-mentions-list-container .mentions-list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  min-width: 200px;
+  font-size: 13px;
+}
+.ProseMirror-mentions-list-container .mentions-list-item:hover {
+  background-color: var(--hf-pm-toolbarHoverBg-color, rgba(148, 148, 148, 0.2862745098));
+}
+.ProseMirror-mentions-list-container .mentions-list-item.is-selected {
+  background-color: var(--hf-pm-toolbarHoverBg-color, rgba(198, 198, 198, 0.2862745098));
+}
+.ProseMirror-mentions-list-container .mentions-list-item img {
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 5px;
+}</style><style type="text/css">placeholder {
+    color: #ccc;
+    position: relative;
+    top: 6px;
+}
+placeholder:after {
+    content: "☁";
+    font-size: 200%;
+    line-height: 0.1;
+    font-weight: bold;
+}
+
+.imagePluginRoot {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 0.25rem;
+    user-select: none;
+}
+
+.imagePluginRoot img {
+    align-self: center;
+    width: 100%;
+}
+
+.imagePluginRoot:hover .imagePluginOverlay {
+    opacity: 1;
+}
+
+.imagePluginOverlay {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    z-index: 2;
+}
+.imagePluginRoot .text {
+    text-align: center;
+}
+</style><style type="text/css">.imagePluginRoot[imageplugin-align="left"] {
+    float: left;
+}
+.imagePluginRoot[imageplugin-align="right"] {
+    float: right;
+    margin: 0;
+}
+.imagePluginRoot[imageplugin-align="center"] {
+    float: none;
+    margin: 0 auto;
+}
+
+.imagePluginRoot[imageplugin-align="fullWidth"] {
+    width: auto;
+    float: none;
+    clear: both;
+}
+
+.alignFullWidthButton {
+    display: none;
+}
+
+.alignRightButton,
+.alignLeftButton,
+.alignCenterButton {
+    width: 5rem;
+}
+
+.imagePluginRoot[imageplugin-align="left"] [imagealign="left"] {
+    background-color: red;
+}
+.imagePluginRoot[imageplugin-align="right"] [imagealign="right"] {
+    background-color: red;
+}
+.imagePluginRoot[imageplugin-align="center"] [imagealign="center"] {
+    background-color: red;
+}
+
+.imageResizeBox {
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    left: 0;
+    position: relative;
+    top: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 1px 1px #47a4f5;
+    align-self: center;
+}
+
+.imageResizeBox.active {
+    transition: none;
+}
+
+.imageResizeBoxControl {
+    height: 5px;
+    position: absolute;
+    width: 5px;
+    z-index: 2;
+}
+
+.imagePluginRoot:hover .imageResizeBox,
+.imageResizeBox.active {
+    opacity: 1;
+}
+
+.imageResizeBoxControl.topLeft {
+    cursor: nw-resize;
+    left: -5px;
+    top: -5px;
+}
+
+.imageResizeBoxControl.top {
+    cursor: n-resize;
+    left: 50%;
+    margin-left: -5px;
+    top: -5px;
+}
+
+.imageResizeBoxControl.topRight {
+    cursor: ne-resize;
+    right: 0;
+    top: -5px;
+}
+
+.imageResizeBoxControl.right {
+    cursor: e-resize;
+    margin-top: -5px;
+    right: 0;
+    top: 50%;
+}
+
+.imageResizeBoxControl.bottomRight {
+    cursor: se-resize;
+    bottom: 0;
+    right: 0;
+}
+
+.imageResizeBoxControl.bottom {
+    cursor: s-resize;
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+}
+
+.imageResizeBoxControl.bottomLeft {
+    cursor: sw-resize;
+    bottom: 0;
+    left: -5px;
+}
+
+.imageResizeBoxControl.left {
+    cursor: w-resize;
+    left: -5px;
+    margin-top: -5px;
+    top: 50%;
+}
+
+.imageResizeBoxControl::after {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: solid 1px rgba(0, 0, 0, 0.65);
+    box-sizing: border-box;
+    content: "";
+    height: 10px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 10px;
+}
+
+.imageResizeBoxControl::before {
+    bottom: -10px;
+    content: "";
+    left: -10px;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
+
+@media only print {
+    .imageResizeBox {
+        display: none;
+    }
+}
+
+.imageResizeBoxWrapper {
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    pointer-events: none;
+}
+
+.imageResizeBoxCenter {
+    position: relative;
+}
+.imageResizeBox {
+    position: absolute;
+}
+.imageResizeBoxControl {
+    z-index: 1000;
+    pointer-events: all;
+}
+</style><style type="text/css">.imageResizeBoxControl {
+    display: none;
+}
+
+.imageResizeBoxControl.bottomRight {
+    display: inline-block;
+    margin-top: -5px;
+    cursor: se-resize;
+    bottom: 0;
+    right: 0;
+}
+
+.imageResizeBoxControl.bottomLeft {
+    cursor: w-resize;
+    left: -5px;
+    margin-top: -5px;
+    top: 50%;
+}
+
+.imageResizeBoxControl::after {
+    content: "";
+    left: 0px;
+    position: absolute;
+    box-sizing: content-box;
+    width: 10px;
+    height: 10px;
+    bottom: -5px;
+    right: -5px;
+    background: #000;
+    outline: 1px solid #fff;
+}
+</style><style type="text/css">.lf-progress {
+  -webkit-appearance: none;
+  -moz-apperance: none;
+  width: 100%;
+  /* margin: 0 10px; */
+  height: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lf-progress:focus {
+  outline: none;
+  border: none;
+}
+.lf-progress::-moz-range-track {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+.lf-progress::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-moz-range-thumb {
+  -moz-appearance: none !important;
+  height: 13px;
+  width: 13px;
+  border: 0;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+.lf-progress::-ms-fill-lower {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-fill-upper {
+  background: #ccc;
+  border-radius: 3px;
+}
+.lf-progress::-ms-thumb {
+  border: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #0fccce;
+  cursor: pointer;
+}
+.lf-progress:focus::-ms-fill-lower {
+  background: #ccc;
+}
+.lf-progress:focus::-ms-fill-upper {
+  background: #ccc;
+}
+.lf-player-container :focus {
+  outline: 0;
+}
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-player-btn-container {
+  display: flex;
+  align-items: center;
+}
+.lf-player-btn {
+  cursor: pointer;
+  fill: #999;
+  width: 14px;
+}
+
+.lf-player-btn.active {
+  fill: #555;
+}
+
+.lf-popover {
+  position: relative;
+}
+
+.lf-popover-content {
+  display: inline-block;
+  position: absolute;
+  background-color: #ffffff;
+  opacity: 1;
+
+  transform: translate(0, -10px);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  padding: 10px;
+}
+
+.lf-popover-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0px);
+}
+
+.lf-arrow {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  bottom: -9px;
+  border-style: solid;
+  border-width: 10px 10px 0px 10px;
+}
+
+.lf-left-align,
+.lf-left-align .lfarrow {
+  left: 0;
+  right: unset;
+}
+
+.lf-right-align,
+.lf-right-align .lf-arrow {
+  right: 0;
+  left: unset;
+}
+
+.lf-text-input {
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  padding: 3px;
+  width: 60px;
+  margin: 0;
+}
+
+.lf-color-picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.lf-color-selectors {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lf-color-component {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.lf-color-component strong {
+  width: 40px;
+}
+
+.lf-color-component input[type='range'] {
+  margin: 0 0 0 10px;
+}
+
+.lf-color-component input[type='number'] {
+  width: 50px;
+  margin: 0 0 0 10px;
+}
+
+.lf-color-preview {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+}
+
+.lf-preview {
+  height: 60px;
+  width: 60px;
+}
+
+.lf-popover-snapshot {
+  width: 150px;
+}
+.lf-popover-snapshot h5 {
+  margin: 5px 0 10px 0;
+  font-size: 0.75rem;
+}
+.lf-popover-snapshot a {
+  display: block;
+  text-decoration: none;
+}
+.lf-popover-snapshot a:before {
+  content: '⥼';
+  margin-right: 5px;
+}
+.lf-popover-snapshot .lf-note {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+}
+.lf-player-controls > div {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.lf-player-controls > div:first-child {
+  margin-left: 0px;
+}
+.lf-player-controls > div:last-child {
+  margin-right: 0px;
+}
+</style><title>Matter: Undelivered Mail Returned to Sender - #INB00345601 - Indiana Legal Help</title><script type="text/javascript" src="https://widget.happyfoxchat.com/v2/visitor/js/widget-loader-core.vendor-5983fe5299a02e39c558.js"></script><script type="text/javascript" src="https://widget.happyfoxchat.com/v2/visitor/js/widget-loader-core-ef0b7adf43e223af2e471344451dc4dc.js"></script><style>#hfc-frame{position:fixed;overflow:hidden;visibility:hidden;opacity:0;z-index:2147483639;border:0px;background-color:transparent;height:90px;width:250px}#hfc-frame.hfc-badge__bottom-right{bottom:0;right:0}#hfc-frame.hfc-badge__bottom-left{bottom:0;left:0}#hfc-frame.hfc-frame__hidden{visibility:hidden !important;height:0 !important}#hfc-frame.hfc-badge.hfc-badge__vertical{top:50%;height:35px}#hfc-frame.hfc-badge.hfc-badge__vertical.hfc-badge__right{right:0;transform-origin:right}#hfc-frame.hfc-badge.hfc-badge__vertical.hfc-badge__right:not(.hfc-badge__compact){transform:rotate(-90deg) translateY(-50%) translateX(50%)}#hfc-frame.hfc-badge.hfc-badge__vertical.hfc-badge__left{left:0;transform-origin:left}#hfc-frame.hfc-badge.hfc-badge__vertical.hfc-badge__left:not(.hfc-badge__compact){transform:rotate(90deg) translateY(-50%) translateX(-50%)}#hfc-frame.hfc-badge.hfc-badge__vertical.hfc-badge__compact{width:100px;height:100px}#hfc-frame.hfc-badge.hfc-badge__compact{width:120px}#hfc-frame.hfc-badge.hfc-triggered-chat,#hfc-frame.hfc-badge.hfc-proactive-chat{width:360px}#hfc-frame.hfc-badge.hfc-triggered-chat{height:270px}#hfc-frame.hfc-badge.hfc-proactive-chat{height:280px}#hfc-frame.hfc-badge.hfc-chatbox__is-mobile.hfc-badge__simple{width:120px}#hfc-frame.hfc-badge.hfc-chatbox__is-mobile.hfc-badge__simple.hfc-badge__vertical{width:250px}#hfc-frame.hfc-badge.hfc-chatbox__is-mobile.hfc-badge__simple.hfc-badge__vertical.hfc-badge__compact{width:120px}#hfc-frame.hfc-chatbox{width:380px;height:590px}#hfc-frame.hfc-chatbox.hfc-chatbox__xl{width:30vw;height:95vh;min-width:420px;min-height:600px;max-width:450px;max-height:800px}#hfc-frame.hfc-chatbox.hfc-chatbox__is-mobile-sdk,#hfc-frame.hfc-chatbox.hfc-chatbox__is-mobile{height:100%;width:100%;min-width:auto;max-width:100%;min-height:auto;max-height:100%}</style></head>
+  <body id="body" cz-shortcut-listen="true" class="ember-application hf-hd-temp-module-switcher-v2 hf-mod-ui-hd">
+    <div id="assets-container"></div>
+    <!-- Script to get config info from meta -->
+    <script type="text/javascript" async="" src="https://widget.happyfoxchat.com/v2/visitor/js/widget-loader.js"></script><script data-cfasync="false" type="text/javascript" nonce="">
+      let metas = document.getElementsByTagName('meta');
+      let configInformation = null;
+      for (let i = 0; i < metas.length; i++) {
+        if (metas[i].getAttribute('name') === 'happyfox-web/config/environment') {
+          let encodedConfigMeta = metas[i].getAttribute('content');
+          configInformation = JSON.parse(unescape(encodedConfigMeta));
+          break;
+        }
+      }
+      window.performanceMetrics = {};
+    </script>
+    
+    
+    <script data-cfasync="false" nonce="">window.performanceMetrics.vendorJsBefore = window.performance.now();</script>
+    <script data-cfasync="false" src="https://d12tly1s0ox52d.cloudfront.net/assets/vendor-959fc2147dc517fdf1e0c21514a09434.js" integrity="sha256-heA3l9kcrcdP/SJ7MADupKVZGI9KqWuZ80YpeW/IUgM= sha512-QvoOWDoOeDQyHGy5tmfdxBYR9DA3dTTiowBH6Xmb+n9J8yd1pfKMlCgqPP8+veesKi478pdyJ2Vaw211PCUr9w==" crossorigin="anonymous"></script>
+    <script data-cfasync="false" nonce="">window.performanceMetrics.vendorJsAfter = window.performance.now();</script>
+    <script data-cfasync="false" nonce="">window.performanceMetrics.appJsBefore = window.performance.now();</script>
+    <script data-cfasync="false" src="https://d12tly1s0ox52d.cloudfront.net/assets/happyfox-web-c17e65f2c0a9f03fe7766bff3b01a444.js" integrity="sha256-NN1IALoQ4q5L6Fa58c3AuJqzGYkyD0Db8r4MIoSOTMY= sha512-kbirUcQuMOT0wRuWDPp+bsI/OIXxYsTFQNyglGRNpl/E5PYhxlb67lqvEyV4XaYl0OHRn+V4vt3yEKkh0yz1jw==" crossorigin="anonymous"></script>
+    <script data-cfasync="false" nonce="">window.performanceMetrics.appJsAfter = window.performance.now();</script>
+
+    <script data-cfasync="false" type="text/javascript" nonce="">
+      function downloadOnDOMContentLoad() {
+        var ckEditor = document.createElement("script");
+        ckEditor.src = "https://d12tly1s0ox52d.cloudfront.net/ckeditor/v13.0/ckeditor.js";
+        ckEditor.async = true;
+        ckEditor.setAttribute('nonce', '46N2gMPgojixcz2UnhYCKA==');
+        document.body.appendChild(ckEditor);
+        var highlightJS = document.createElement("script");
+        highlightJS.src = "https://d12tly1s0ox52d.cloudfront.net/ckeditor/v13.0/plugins/codesnippet/lib/highlight/highlight.pack.js";
+        highlightJS.async = true;
+        highlightJS.setAttribute('nonce', '46N2gMPgojixcz2UnhYCKA==');
+        document.body.appendChild(highlightJS);
+        var highlightCSS = document.createElement('link');
+        highlightCSS.rel = 'stylesheet';
+        highlightCSS.href = 'https://d12tly1s0ox52d.cloudfront.net/ckeditor/v13.0/plugins/codesnippet/lib/highlight/styles/default.css';
+        document.body.appendChild(highlightCSS);
+      }
+      if (window.addEventListener) {
+        window.addEventListener("DOMContentLoaded", downloadOnDOMContentLoad, false);
+      } else {
+        window.onload = downloadOnDOMContentLoad;
+      }
+    </script>
+    <script data-cfasync="false" nonce="">
+      if (typeof remote !== 'undefined') {
+        $(document).on('click', 'a', function (event) {
+          let href = $(event.target).attr('href');
+          if (href) {
+            if (href.indexOf('http://') === 0 || href.indexOf('https://') === 0) {
+              event.preventDefault();
+              remote.shell.openExternal(href);
+            }
+          }
+        });
+      }
+    </script>
+    <script data-cfasync="false" nonce="">
+      /* eslint-disable camelcase */
+            var Engage_Config = {
+              selector: 'hf-change-log-releases'
+            }
+      /* eslint-enable camelcase */    
+    </script>
+    <div id="ember-basic-dropdown-wormhole"></div>
+    <!--Start of HappyFox Live Chat Script-->
+    <script data-cfasync="false" nonce="">
+    if (configInformation.environment === 'production') {
+        window.HFCHAT_CONFIG = {
+          EMBED_TOKEN: configInformation.hfcEmbedToken,
+          ASSETS_URL: configInformation.hfcAssetsURL
+        };
+        HFCHAT_CONFIG.options = {
+          showBadgeOnLoad: false
+        };
+        (function () {
+          var scriptTag = document.createElement('script')
+          scriptTag.type = 'text/javascript'
+          scriptTag.async = true
+          scriptTag.src = window.HFCHAT_CONFIG.ASSETS_URL + '/js/widget-loader.js'
+
+          var s = document.getElementsByTagName('script')[0]
+          s.parentNode.insertBefore(scriptTag, s)
+        })()
+        window.HFCHAT_CONFIG.onload = function() {
+          var HappyFoxChat = this;
+          window.HappyFoxChat = HappyFoxChat;
+          window.HappyFoxChat.isChatWindowOpen = false;
+        }
+        window.performanceMetrics.chatScriptIncluded = window.performance.now();
+      }
+    </script>
+    <!--End of HappyFox Live Chat Script-->
+  
+
+<script src="https://d12tly1s0ox52d.cloudfront.net/ckeditor/v13.0/ckeditor.js" async="" nonce=""></script><script src="https://d12tly1s0ox52d.cloudfront.net/ckeditor/v13.0/plugins/codesnippet/lib/highlight/highlight.pack.js" async="" nonce=""></script><link rel="stylesheet" href="https://d12tly1s0ox52d.cloudfront.net/ckeditor/v13.0/plugins/codesnippet/lib/highlight/styles/default.css"><div id="modal-overlays"></div><div class="ember-view" id="ember4"><div class="hf-application-wrapper " data-test-id="hf-application-wrapper">
+<!----><!----><!----><!---->  <header class="hf-top-bar hf-js-top-bar" data-pop-over-selector="top-bar">
+      <div class="hf-top-bar_title  hf-top-bar-module-title">
+        <p class="hf-top-bar_title_text hf-font-light" title="Tickets" data-test-id="current-module">Tickets</p>
+      </div>
+    <div class="hf-top-bar_body">
+<!---->
+        <div data-test-id="global-search" id="ember68" class="hf-global-search ember-view"><div class="hf-global-search_overlay "></div>
+<div class="hf-global-search_trigger " data-test-id="global-search-result-trigger" data-ember-action="" data-ember-action-69="69"></div>
+<!----><!----><div id="ember70" class="hf-mod-dropdown hf-mod-global-search hf-js-test-global-search ember-view">    <div class="ember-basic-dropdown">
+    <div class="ember-view ember-basic-dropdown-trigger ember-basic-dropdown-trigger--in-place  ember-power-select-trigger" role="button" tabindex="-1" data-ebd-id="ember71-trigger" aria-owns="ember-basic-dropdown-content-ember71">
+    
+          <span class="ember-power-select-placeholder">Search Tickets and Contacts</span>
+
+<span class="ember-power-select-status-icon"></span>
+
+  
+  </div>
+
+    <div id="ember-basic-dropdown-content-ember71" class="ember-basic-dropdown-content-placeholder" style="display: none;"></div>
+
+</div>
+
+</div></div>
+
+<!---->      <nav class="hf-top-bar_navs hf-u-push-right">
+          <div class="hf-top-bar_navs_ticket-related-items">
+              <div class="hf-top-bar_navs_item hf-mod-new-ticket">
+                <button class="hf-top-bar_navs_item_new-ticket" data-test-id="new-ticket-open" data-ember-action="" data-ember-action-77="77">
+                  <span class="hf-top-bar_navs_item_new-ticket_plus">+</span>
+                  <span>New Ticket</span>
+                </button>
+              </div>
+<!----><!----><!----><!---->
+<div id="ember363" class="hf-top-bar-integrations hf-pop-over-container ember-view"><div id="ember364" class="hf-u-position-relative hf-js-custom-app-top-bar-menu-trigger custom-app-top-bar-menu-trigger hf-js-custom-app-top-bar-menu-trigger-dialpad hf-popover-trigger ember-view">                    <div id="ember365" class="hf-mod-top-bar-menu hf-custom-app ember-view"><!---->  <iframe src="https://ilhd.happyfox.com/integrations/dialpad/pages/top-bar-menu" class="hf-app-iframe hf-js-iframe" name="dialpad-top-bar-menu" frameborder="0" border="0" cellspacing="0" data-test-id="dialpad-top-bar-menu" style="height: 16px;"></iframe>
+</div>
+                      <div class="hf-u-absolute-fill"></div>
+</div><div id="ember366" class="hf-u-invisible hf-mod-dial-pad hf-mod-dialpad hf-mini-pop-over hf-pop-over hf-pop-over ember-view">    <div class="hf-mini-pop-over_close-icon hf-js-pop-over-close" data-test-id="pop-over-close" data-ember-action="" data-ember-action-367="367"><svg width="12" height="10" viewBox="0 0 12 10" xmlns="http://www.w3.org/2000/svg"><path d="M10.978.026L1.22 9.782m9.758 0L1.22.026" stroke="#859492" fill="none" fill-rule="evenodd"></path></svg></div>
+                        <div id="ember368" class="hf-mod-top-bar-menu-content hf-custom-app ember-view"><!---->  <iframe src="https://ilhd.happyfox.com/integrations/dialpad/pages/top-bar-menu-content" class="hf-app-iframe hf-js-iframe" name="dialpad-top-bar-menu-content" frameborder="0" border="0" cellspacing="0" data-test-id="dialpad-top-bar-menu-content" style="height: 520px;"></iframe>
+</div>
+
+</div>
+<!----></div>
+
+              <div class="hf-top-bar_navs_item hf-mod-tasks-nav-item hf-tooltipped hf-tooltipped-bottom" aria-label="Pending Tasks">
+                <div class="hf-pop-over-container" data-test-id="tasks-list-slider-trigger" data-ember-action="" data-ember-action-84="84">
+                  <svg class="hf-u-vertical-top" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><g stroke="#FFF" stroke-width=".8" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.36L8.143 11 12 6"></path><path d="M8.74 1a32.72 32.72 0 0 0-4.128.236c-1.858.23-3.296 1.69-3.447 3.499C1.088 5.845 1 7.199 1 8.499c0 1.3.088 2.655.186 3.79.15 1.809 1.588 3.268 3.447 3.499 1.363.156 2.735.226 4.107.21a32.72 32.72 0 0 0 4.129-.235c1.856-.233 3.291-1.692 3.441-3.5.098-1.104.181-2.434.181-3.789s-.083-2.684-.18-3.789c-.174-1.788-1.604-3.221-3.442-3.45a32.72 32.72 0 0 0-4.129-.234z"></path></g></svg>
+<!---->                </div>
+              </div>
+              <div class="hf-top-bar_navs_item hf-tooltipped hf-tooltipped-bottom hf-mod-notifications-center-nav-item" aria-label="My Notifications" data-test-id="staff-menu_notifications" data-pop-over="close" data-ember-action="" data-ember-action-85="85">
+                <span><svg class="hf-u-vertical-bottom" width="16" height="18" viewBox="0 0 16 18" xmlns="http://www.w3.org/2000/svg"><g stroke="#FFF" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path d="M14.41 12.67c-.987-1.208-1.684-1.824-1.684-5.157 0-3.051-1.559-4.139-2.841-4.667a.685.685 0 0 1-.383-.406C9.277 1.675 8.646 1 7.808 1c-.839 0-1.47.675-1.693 1.441a.679.679 0 0 1-.382.405c-1.285.529-2.841 1.612-2.841 4.667-.002 3.333-.7 3.949-1.687 5.157-.41.501-.051 1.253.665 1.253h11.88c.712 0 1.068-.754.66-1.253zM10.27 13.923v.615a2.462 2.462 0 1 1-4.924 0v-.615"></path></g></svg></span>
+<!---->              </div>
+          </div>
+
+          <div class="hf-top-bar_navs_item hf-change-log-releases hf-tooltipped hf-tooltipped-bottom hf-mod-change-log-nav-item" aria-label="Change log" style="position: relative;">
+              <svg class="hf-u-vertical-top" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path fill="#FFF" d="M3.333 14.21h9.58c.332.001.65-.122.885-.344.235-.222.368-.523.369-.836V1.97a1.157 1.157 0 0 0-.369-.836 1.287 1.287 0 0 0-.886-.345H4.587c-.332 0-.65.123-.885.345a1.154 1.154 0 0 0-.369.836v12.24zM2.5 1.97A1.924 1.924 0 0 1 3.114.574 2.143 2.143 0 0 1 4.588 0h8.322a2.144 2.144 0 0 1 1.476.574c.392.37.613.871.614 1.396v11.06a1.923 1.923 0 0 1-.614 1.395 2.143 2.143 0 0 1-1.474.574H2.5V1.97zM.833 7.895v5.521c0 .438.375.795.834.795H2.5V7.895H.833zm2.5-.79V15H1.667C.747 15 0 14.29 0 13.416v-6.31h3.333zm2.084-2.763h7.5v.79h-7.5v-.79zm0-2.368H8.75v.79H5.417v-.79zm0 4.737h7.5V7.5h-7.5v-.79zm0 2.368h7.5v.79h-7.5v-.79zm0 2.368h7.5v.79h-7.5v-.79z"></path></svg>
+          <span id="Engage_badge_cont" style="border-radius: 50%; padding: 2px; display: inline-flex; height: 16px; width: 16px; align-items: center; position: absolute; top: 5px; left: 20px; z-index: 999; justify-content: space-around; background-color: rgb(165, 35, 24);">
+        <span id="Engage_badge" style="font-size:9px;color:white">17</span>
+    </span></div>
+
+            <div class="hf-top-bar_navs_item hf-tooltipped hf-tooltipped-bottom hf-mod-university-nav-item" aria-label="University" data-test-id="staff-menu_university" data-pop-over="close" data-ember-action="" data-ember-action-86="86">
+              <span><svg class="hf-u-vertical-bottom" width="19" height="15" viewBox="0 0 19 15" xmlns="http://www.w3.org/2000/svg"><path d="M19 5.32a.273.273 0 0 1-.153.247l-.787.357v4.01a.429.429 0 0 1-.43.426.433.433 0 0 1-.313-.12.425.425 0 0 1-.132-.306l.074-3.582-7.664 4.268a.271.271 0 0 1-.248-.001L4.37 7.599l-.02 4.837c1.782 1.269 2.987 1.71 5.139 1.71 2.151 0 3.357-.441 5.119-1.67V9.438c0-.235.193-.426.431-.426s.431.19.431.426l-.02 3.457-.15.111C13.406 14.442 11.909 15 9.492 15c-2.416 0-3.909-.557-5.808-1.995l-.17-.151.028-5.588-3.386-1.67a.273.273 0 0 1-.003-.49L9.367.03a.279.279 0 0 1 .25.001l9.226 5.046A.273.273 0 0 1 19 5.32zm-1.508.055L9.504.909 1.501 5.308 9.48 9.72l8.01-4.346z" fill="#FFF"></path></svg></span>
+            </div>
+
+          <div class="hf-top-bar_navs_item hf-mod-get-support-nav-item hf-tooltipped hf-tooltipped-bottom" aria-label="Support">
+<div id="ember87" class="hf-pop-over-container ember-view"><div aria-label="Support" data-test-id="get-support" id="ember88" class="hf-support-menu hf-u-vertically-centered-container hf-popover-trigger ember-view">                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><path fill="#FFF" d="M7.494 15A7.488 7.488 0 0 1 0 7.506 7.49 7.49 0 0 1 7.494 0 7.493 7.493 0 0 1 15 7.506 7.491 7.491 0 0 1 7.494 15zm0-.75a6.742 6.742 0 0 0 6.756-6.745A6.743 6.743 0 0 0 7.494.75 6.74 6.74 0 0 0 .75 7.505a6.74 6.74 0 0 0 6.744 6.745zm-1.48-8.295H5.25c.07-1.24.947-2.205 2.464-2.205 1.417 0 2.336.9 2.336 2.094 0 .865-.585 1.48-1.39 1.994-.771.49-.839.824-.839 1.473v.439H7.04V9.2c-.006-.772.185-1.263 1.009-1.795.735-.485 1.173-.895 1.173-1.526 0-.83-.59-1.433-1.536-1.433-.941 0-1.594.585-1.67 1.509zM7.5 11.437a.559.559 0 0 1-.563-.562c0-.32.25-.563.563-.563.32 0 .563.243.563.563a.555.555 0 0 1-.563.563z"></path></svg>
+</div><!---->
+<!----></div>          </div>
+        <div class="hf-hd-app-switcher">
+<div id="ember89" class="hf-pop-over-container ember-view"><div data-test-id="app-switcher_trigger" id="ember90" class="hf-hd-app-switcher-trigger hf-popover-trigger ember-view">      <div class="hf-top-bar_navs_item hf-tooltipped hf-tooltipped-bottom hf-mod-notifications-center-nav-item" aria-label="App Switcher" data-test-id="staff-menu_app-switcher" data-pop-over="close">
+        <svg class="hf-hd-module-switcher-logo" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M0 0h30v30H0z"></path><path d="M7.308 9.615a2.308 2.308 0 1 0 0-4.615 2.308 2.308 0 0 0 0 4.615zm0 7.696a2.308 2.308 0 1 0 0-4.616 2.308 2.308 0 0 0 0 4.616zm0 7.695a2.308 2.308 0 1 0 0-4.615 2.308 2.308 0 0 0 0 4.615zm7.695-15.39a2.308 2.308 0 1 0 0-4.616 2.308 2.308 0 0 0 0 4.615zm0 7.695a2.308 2.308 0 1 0 0-4.616 2.308 2.308 0 0 0 0 4.616zm0 7.695a2.308 2.308 0 1 0 0-4.615 2.308 2.308 0 0 0 0 4.615zm7.695-15.39a2.308 2.308 0 1 0 0-4.616 2.308 2.308 0 0 0 0 4.615zm0 7.695a2.308 2.308 0 1 0 0-4.616 2.308 2.308 0 0 0 0 4.616zm0 7.695a2.308 2.308 0 1 0 0-4.615 2.308 2.308 0 0 0 0 4.615z" fill="#FFF"></path></g></svg>
+      </div>
+</div><!---->
+<!----></div></div>
+        <div class="hf-top-bar_navs_item hf-mod-staff-profile-nav-item">
+<div id="ember91" class="hf-pop-over-container ember-view"><div data-test-id="staff-menu" id="ember92" class="hf-staff-menu hf-u-vertically-centered-container hf-popover-trigger ember-view">              <div id="ember93" class="hf-staff-menu-header-avatar hf-avatar-image-container ember-view"><!---->  <img src="https://hf-files-oregon.s3.amazonaws.com/hdpilhd_profile_picture/1-profile_24x24.png?1759291200000" alt="Logged-In Agent" data-test-id="staff-profile-image" class="hf-avatar-image hf-avatar-image_show">
+</div>
+<!----></div><!---->
+<!----></div>        </div>
+      </nav>
+    </div>
+  </header>
+    <aside data-test-id="pinned-items-pane" id="ember94" class="hf-pinned-items hf-slide-out ember-view"><div class="hf-pinned-items_actions ">
+  <span>Unpin: </span>
+  <span class="hf-pinned-items_actions_item hf-js-confirmation-trigger-all-tickets" data-test-id="unpin-all-tickets-trigger" data-ember-action="" data-ember-action-95="95">
+    All Tickets
+  </span>
+  <span class="hf-pinned-items_actions_item hf-js-confirmation-trigger-closed-tickets" data-test-id="unpin-closed-tickets-trigger" data-ember-action="" data-ember-action-96="96">
+    Closed Tickets
+  </span>
+<!----></div>
+<ul class="hf-pinned-items_list" data-test-id="pinned-items_list">
+<!----></ul></aside>
+
+    <aside id="ember97" class="ember-view">
+<div class="hf-module-switcher-list hf-slide-out hf-hd-module-switcher-locked">
+    <div class="hf-module-switcher-list-items">
+        <div class="hf-happyfox-company-logo">
+             <div class="hf-logo-container">
+                <svg class="hf-module-switcher-logo_image" width="28" height="31" viewBox="0 0 28 31" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="hf-556a"><stop stop-color="#45474B" offset="0%"></stop><stop stop-color="#696B6F" offset="98.541%"></stop></linearGradient><linearGradient x1="69.36%" y1="24.084%" x2="25.916%" y2="119.36%" id="hf-557b"><stop stop-color="#CCCED2" offset="0%"></stop><stop stop-color="#8E9094" offset="100%"></stop></linearGradient><filter x="-12.8%" y="-12.9%" width="125.7%" height="151.7%" filterUnits="objectBoundingBox" id="hf-558c"><feOffset dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09765625 0" in="shadowOffsetOuter1" result="shadowMatrixOuter1"></feColorMatrix><feMerge><feMergeNode in="shadowMatrixOuter1"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><g style="mix-blend-mode:luminosity" transform="translate(0 .525)" fill="none" fill-rule="evenodd"><rect fill="url(#hf-556a)" y="2.124" width="27.876" height="27.876" rx="8"></rect><rect stroke="url(#hf-557b)" stroke-width=".5" fill="#808286" x=".25" y=".25" width="27.376" height="27.376" rx="8"></rect><g filter="url(#hf-558c)" transform="translate(6.146 6.909)" fill="#FFF" fill-rule="nonzero"><path d="M2.121 6.176c.332 0 .657-.094.938-.273l3.39-2.15L1.689.285A1.063 1.063 0 0 0 0 1.142v3.641l.884.88c.332.33.695.509 1.164.509l.073.004z"></path><path d="M.371 9.61l4.87 4.18 1.652 1.419a1.06 1.06 0 0 0 1.35.027l6.936-5.47c.254-.203.404-.51.404-.835V1.065c0-.853-.957-1.36-1.662-.878L7.535 4.546 3.73 6.96A3 3 0 0 1 0 6.552v2.252c0 .31.136.605.371.805z"></path></g></g></svg>
+             </div>
+        </div>
+
+                    <div class="hf-module-switcher-modules hf-module-switcher-modules_foxlight" data-module="foxlight" title="Go to... / Navigate to" data-test-id="module-switcher_foxlight" data-ember-action="" data-ember-action-106="106">
+                        <div class="hf-module-link">
+                            <svg class="hf-hd-sidebar_icon" width="29" height="28" viewBox="0 0 29 28" xmlns="http://www.w3.org/2000/svg"><g transform="translate(.466)" fill="none" fill-rule="evenodd"><path d="M0 0h28v28H0z"></path><circle stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="13.196" cy="13.196" r="6.433"></circle><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21.238 21.238l-3.499-3.499"></path></g></svg>
+<!---->                        </div>
+                    </div>
+                
+                    <div class="hf-module-switcher-group-separator-line"></div>
+<a data-test-id="module-switcher_home" title="" href="/staff/home" id="ember107" class="hf-module-switcher-modules ember-view">                        <div class="hf-module-link" data-module="home">
+                            <svg class="hf-hd-sidebar_icon" width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M.5.487h28v28H.5z"></path><path d="M7.168 11.862L14.5 5.737l7.332 6.125v9.625c0 .464-.172.91-.477 1.238-.306.328-.72.512-1.153.512H8.798c-.433 0-.847-.184-1.153-.512a1.818 1.818 0 0 1-.477-1.238v-9.625z" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+<!---->                        </div>
+</a>
+<!---->                    <div class="hf-module-switcher-modules hf-module-switcher-module-active" data-module="tickets" title="" data-test-id="module-switcher_tickets" data-ember-action="" data-ember-action-108="108">
+                        <div class="hf-module-link">
+                            <svg class="hf-hd-sidebar_icon" width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M.5.487h28v28H.5z"></path><g stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M6.039 16.099h16.923v5.957H6.039zM6.039 6.099h16.923v5.957H6.039z"></path></g></g></svg>
+<!---->                        </div>
+                    </div>
+                
+<!---->                    <div class="hf-module-switcher-modules" data-module="tasks" title="" data-test-id="module-switcher_tasks" data-ember-action="" data-ember-action-109="109">
+                        <div class="hf-module-link">
+                            <svg class="hf-hd-sidebar_icon" width="26" height="27" viewBox="0 0 26 27" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0 .4)" fill="none" fill-rule="evenodd"><path d="M0 0h26v26H0z"></path><rect stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="4.975" y="4.596" width="16.25" height="16.25" rx="6"></rect><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9.372 12.675l2.437 2.438 5.688-4.875"></path></g></svg>
+<!---->                        </div>
+                    </div>
+                
+                    <div class="hf-module-switcher-group-separator-line"></div>
+<a data-test-id="module-switcher_reports" title="" href="/staff/reports/inflow" id="ember110" class="hf-module-switcher-modules ember-view">                        <div class="hf-module-link" data-module="reports">
+                            <svg class="hf-hd-sidebar_icon" width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M.5.487h28v28H.5z"></path><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6.034 9.022H11.5v12.99H6.034zM11.5 15.077h5.466v6.936H11.5zM16.966 6.013h5.466v16h-5.466z"></path></g></svg>
+<!---->                        </div>
+</a>
+<!---->                    <div class="hf-module-switcher-modules" data-module="contacts" title="" data-test-id="module-switcher_contacts" data-ember-action="" data-ember-action-111="111">
+                        <div class="hf-module-link">
+                            <svg class="hf-hd-sidebar_icon" width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M.5.487h28v28H.5z"></path><path d="M21.476 22.362v-1.75a3.5 3.5 0 0 0-3.5-3.5h-7a3.5 3.5 0 0 0-3.5 3.5v1.75M14.476 13.612a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+<!---->                        </div>
+                    </div>
+                
+                    <div class="hf-module-switcher-group-separator-line"></div>
+<a data-test-id="module-switcher_support-center" title="" href="/staff/support-center" id="ember112" class="hf-module-switcher-modules ember-view">                        <div class="hf-module-link" data-module="support-center">
+                            <svg class="hf-hd-sidebar_icon" width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"><g transform="translate(.5 .487)" fill="none" fill-rule="evenodd"><path d="M0 0h28v28H0z"></path><path stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5.642 11.957h16.782"></path><rect stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="5.222" y="6.322" width="17.752" height="15.465" rx="3"></rect><circle stroke="#FFF" fill="#FFF" cx="8.458" cy="9.362" r="1"></circle><circle stroke="#FFF" fill="#FFF" cx="10.895" cy="9.362" r="1"></circle></g></svg>
+<!---->                        </div>
+</a>
+<!----><a data-test-id="module-switcher_kb" title="" href="/staff/kb" id="ember113" class="hf-module-switcher-modules ember-view">                        <div class="hf-module-link" data-module="kb">
+                            <svg class="hf-hd-sidebar_icon" width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M.5.487h28v28H.5z"></path><g stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M14.5 9.845v7.945M6.382 7.147l8.056 2.716 8.18-2.716v13.19l-8.18 2.715-8.056-2.716z"></path></g></g></svg>
+<!---->                        </div>
+</a>
+                    <div class="hf-module-switcher-group-separator-line"></div>
+<a data-test-id="module-switcher_manage" title="" href="/staff/manage" id="ember114" class="hf-module-switcher-modules ember-view">                        <div class="hf-module-link" data-module="manage">
+                            <svg class="hf-hd-sidebar_icon" width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M.5.42h28v28H.5z"></path><g transform="translate(3.045 3.398)" stroke="#FFF" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2"><path d="M3.818 15.432h0a8.009 8.009 0 0 0 0-8.818h0a8.009 8.009 0 0 0 7.637-4.41h0a8.009 8.009 0 0 0 7.637 4.41h0a8.009 8.009 0 0 0 0 8.818h0a8.009 8.009 0 0 0-7.637 4.409h0a8.009 8.009 0 0 0-7.637-4.41z"></path><circle cx="11.455" cy="11.023" r="2.201"></circle></g></g></svg>
+<!---->                        </div>
+</a>
+<!----><a data-test-id="module-switcher_channels" title="" href="/staff/channels/email" id="ember115" class="hf-module-switcher-modules ember-view">                        <div class="hf-module-link" data-module="channels">
+                            <svg class="hf-hd-sidebar_icon" width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M.5.487h28v28H.5z"></path><g transform="translate(6.353 5.942)" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="13.675" cy="12.625" r="3.224"></circle><circle cx="3.224" cy="12.625" r="3.224"></circle><circle cx="8.147" cy="3.224" r="3.224"></circle></g></g></svg>
+<!---->                        </div>
+</a>
+<!----><a data-test-id="module-switcher_automate" title="" href="/staff/automate" id="ember116" class="hf-module-switcher-modules ember-view">                        <div class="hf-module-link" data-module="automate">
+                            <svg class="hf-hd-sidebar_icon" width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"><g transform="translate(.5 .487)" fill="none" fill-rule="evenodd"><path d="M0 0h28v28H0z"></path><path d="M21.082 15.898a7.332 7.332 0 1 0-3.122 4.272M20.908 15.87l-2.23-2.256" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><circle stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" cx="14" cy="14" r="1.246"></circle></g></svg>
+<!---->                        </div>
+</a>
+<!----><a data-test-id="module-switcher_apps" title="" href="/staff/apps" id="ember117" class="hf-module-switcher-modules ember-view">                        <div class="hf-module-link" data-module="apps">
+                            <svg class="hf-hd-sidebar_icon" width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M.5.42h28v28H.5z"></path><g stroke="#FFF" stroke-width="2"><path d="M21.506 21.69a2.933 2.933 0 0 1-2.08.863 2.933 2.933 0 0 1-2.08-.862c-.826-.825-1.158-2.656-1.201-5.361 2.705.043 4.536.376 5.36 1.2.575.575.862 1.328.862 2.08 0 .754-.287 1.506-.861 2.08zM7.494 7.68a2.933 2.933 0 0 0-.861 2.08c0 .753.287 1.505.861 2.08.825.825 2.656 1.157 5.361 1.2-.043-2.705-.375-4.535-1.2-5.36a2.933 2.933 0 0 0-2.08-.862c-.753 0-1.506.287-2.08.862z"></path><g><path d="M21.506 7.68c.574.574.861 1.327.861 2.08 0 .753-.287 1.505-.861 2.08-.826.825-2.656 1.157-5.361 1.2.043-2.705.375-4.535 1.2-5.36a2.933 2.933 0 0 1 2.08-.862c.753 0 1.506.287 2.08.862zM7.494 21.69a2.933 2.933 0 0 0 2.08.862c.753 0 1.506-.287 2.08-.861.826-.825 1.158-2.656 1.201-5.361-2.705.043-4.536.375-5.36 1.2a2.933 2.933 0 0 0-.862 2.08c0 .754.287 1.506.861 2.08z"></path></g></g></g></svg>
+<!---->                        </div>
+</a>
+<!---->                    <div class="hf-module-switcher-modules" data-module="ai-settings" title="" data-test-id="module-switcher_ai-settings" data-ember-action="" data-ember-action-118="118">
+                        <div class="hf-module-link">
+                            <svg class="hf-hd-sidebar_icon" width="29" height="29" viewBox="0 0 29 29" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M.5.487h28v28H.5z"></path><path d="M12.661 9.398l2.869 4.71c.4.657.164 1.499-.527 1.879-.692.38-1.577.156-1.977-.501l-1.584-2.6-2.673 4.626h7.856c.778 0 1.412.584 1.445 1.316l.002.06c0 .759-.648 1.374-1.447 1.374H6.324c-1.1 0-1.798-1.12-1.268-2.037l5.085-8.8c.543-.938 1.956-.953 2.52-.027zm6.06.015l5.217 8.8c.393.66.146 1.5-.55 1.872-.696.373-1.579.138-1.97-.523l-5.218-8.8c-.392-.661-.146-1.5.55-1.873.697-.372 1.579-.138 1.971.524z" fill="#FFF"></path></g></svg>
+<!---->                        </div>
+                    </div>
+                
+<!---->    </div>
+
+        <div class="hf-module-switcher-bottom-section ">
+            <div class="hf-module-switcher-modules hf-hd-module-switcher-lock-sidebar hf-tooltipped hf-tooltipped-right" aria-label="Unlock Sidebar" data-ember-action="" data-ember-action-98="98"> 
+                <div class="hf-module-link">
+                        <svg class="hf-hd-module-switcher-lock-icon" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M.052 0h16.217v16.217H.052z"></path><path d="M3.06 11.474V4.482a1 1 0 0 1 1-1h7.888a1 1 0 0 1 1 1v6.992a1 1 0 0 1-1 1H4.06a1 1 0 0 1-1-1z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3.06 11.474V4.482a1 1 0 0 1 1-1h.189a1 1 0 0 1 1 1v6.992a1 1 0 0 1-1 1H4.06a1 1 0 0 1-1-1z" stroke="#FFF" fill="#FFF" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+<!---->                </div>
+            </div>
+        </div>
+</div>
+
+<div id="ember99" class="ember-view">
+<div class="hf-hd-module-switcher-sub-modules-container">
+    <div class="hf-hd-module-switcher-sub-module-container" style="display: none;">
+<!---->    </div>
+</div>
+
+</div>
+
+<!----></aside>
+
+  <div id="ember100" class="hf-pop-over-container ember-view hf-domain-verification-reminder-popup hf-hide-domain-verification-reminder-popup">
+<!---->
+<!----></div>
+  <div class="hf-foxlight-overlay hf-u-hide">
+<!----></div>
+<!----><!----><!----><section class="hf-content hf-tickets-content ">
+<!---->  <div class="hf-outlet-container  hf-mod-liquid-outlet hf-mod-details">
+      
+<!----><section class="hf-details hf-tickets-outlet-container ">
+    <div id="ember125" class="ember-view"><section class="hf-details_nav-bar">
+<!----><!---->    <section id="ember251" class="hf-agent-collision hf-u-hv-centered ember-view"><div id="ember252" class="hf-pop-over-container ember-view"><div id="ember253" class="hf-popover-trigger ember-view">    <div class="hf-u-hv-centered-container">
+<!----><!---->    </div>
+</div><!---->
+<!----></div></section>
+  <div class="hf-details_nav-bar_right">
+<!----><!---->    <a data-test-id="details-close" class="hf-details_nav-bar_right_close" data-ember-action="" data-ember-action-126="126">
+      Close
+      <svg class="hf-u-icon-left-margin" width="12" height="10" viewBox="0 0 12 10" xmlns="http://www.w3.org/2000/svg"><path d="M10.978.026L1.22 9.782m9.758 0L1.22.026" stroke="#859492" fill="none" fill-rule="evenodd"></path></svg>
+    </a>
+  </div>
+</section>
+</div>
+<!----><section data-test-id="details-scrollable-pane" id="ember127" class="hf-details-main hf-mod-ticket hf-js-details-scrollable-pane ember-view">      <header class="hf-details-header">
+        <div class="hf-workflows-component">
+            <div data-test-id="hf-workflows-component" id="ember128" class="ember-view"><div id="ember129" class="hf-workflows-popover hf-details-header_item hf-mod-right-item hf-pop-over-container ember-view"><div data-test-id="hf-workflow-popover-trigger" id="ember130" class="hf-details_more-actions_trigger hf-popover-trigger ember-view">    <a class="hf-details-header_item_text">Workflows</a>
+    <div class="hf-u-icon-left-margin hf-u-disclosure-indicator "><svg width="8" height="4" viewBox="0 0 8 4" xmlns="http://www.w3.org/2000/svg"><path d="M3.55 3.86L-.001.307h7.32L3.551 3.86z" fill="#999" fill-rule="evenodd"></path></svg></div>
+</div><!---->
+<!----></div><!----></div>
+        </div>
+        <div id="ember131" class="ember-view"><div id="ember132" class="hf-details-header_item hf-mod-right-item hf-pop-over-container ember-view"><div id="ember133" class="hf-details_more-actions_trigger hf-popover-trigger ember-view">    <a class="hf-details-header_item_text" data-test-id="details-more-actions">More Actions</a>
+    <div class="hf-u-icon-left-margin hf-u-disclosure-indicator "><svg width="8" height="4" viewBox="0 0 8 4" xmlns="http://www.w3.org/2000/svg"><path d="M3.55 3.86L-.001.307h7.32L3.551 3.86z" fill="#999" fill-rule="evenodd"></path></svg></div>
+</div><!---->
+<!----></div></div>
+      </header>
+
+<!---->
+<!---->
+        <article data-test-id="ticket-box" tabindex="0" id="ember134" class="hf-ticket-box ember-view"><div class="hf-ticket-box_main hf-mod-details">
+  <div class="hf-ticket-box_main_left">
+    <div class="hf-ticket-box_display-id">#INB00345601</div>
+    <div id="ember135" class="ember-view"><div id="ember136" class="hf-pop-over-container ember-view"><div data-test-id="ticket-action_change-status_trigger" id="ember137" class="       hf-popover-trigger ember-view">          <div class="hf-ticket-status" data-test-id="ticket-box_status" style="background-color: #FF0000; color: var(--hf-hd-text-white-100);">
+            <span class="hf-ticket-status_name">Open</span>
+          </div>
+        </div><!---->
+<!----></div></div>
+  </div>
+  <div class="hf-ticket-box_main_middle">
+    <div class="hf-ticket-box_main_middle_top">
+<!---->      <div id="ember138" class="hf-ticket-box_subject hf-is-details ember-view">    <h2 class="is-read-only" title="Matter: Undelivered Mail Returned to Sender">
+      <span data-test-id="ticket-subject" data-ember-action="" data-ember-action-139="139">
+        Matter: Undelivered Mail Returned to Sender
+      </span>
+        <span class="hf-ticket-box_subject_edit-icon" data-test-id="ticket-subject-edit-icon" data-ember-action="" data-ember-action-140="140">
+          <svg width="12" height="11" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg"><path d="M.759 10.269l-.035-2.8 2.999 3zm5.71-8.545L9.415 4.67 4.184 9.9 1.237 6.955zM8.192 0l2.947 2.946-1.15 1.15-2.946-2.947z" fill="gray" fill-rule="evenodd"></path></svg>
+        </span>
+    </h2>
+</div>
+        <div class="hf-u-hv-centered-container">
+          <div class="hf-ticket-box_messages-count">1</div>
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->          <span class="hf-ticket-box_last-updated-at hf-tooltipped hf-tooltipped-top" aria-label="Sep 27, 2025, 10:42 AM">
+            4 days ago
+          </span>
+          <div class="hf-ticket-box_copy-clipboard hf-tooltipped hf-tooltipped-top" aria-label="Copy to clipboard" data-state="copy-to-clipboard">
+  
+            <svg class="hf-ticket-box_copy-copy_icon" width="15.966" height="16.028" viewBox="0 0 15.966 16.028" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v9.028a1.5 1.5 0 0 0 1.5 1.5l2.466-.001v2a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1.999V1.5a1.5 1.5 0 0 0-1.5-1.5H1.5zm4.466 5.028h8a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1zM1.5 1h8.966a.5.5 0 0 1 .5.5l.001 2.527h-5a2 2 0 0 0-2 2v5H1.5a.5.5 0 0 1-.5-.5V1.5a.5.5 0 0 1 .5-.5z" fill="currentColor" fill-rule="nonzero"></path></svg>
+            <svg class="hf-ticket-box_copy-tick_icon" width="12" height="9" viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg"><path d="M1.08 4.34l3.132 3.341L11 1" stroke="#979797" stroke-width="1.5" fill="none" fill-rule="evenodd"></path></svg>
+          
+</div>
+        </div>
+    </div>
+      <div class="hf-ticket-box_description">
+        <p class="hf-ticket-box_description_text is-read-only">[EXTERNAL EMAIL] DO NOT CLICK links or attachments unless you recognize the
+sender and know the content i</p>
+      </div>
+  </div>
+  <div class="hf-ticket-box_main_right">
+<!----><!---->  </div>
+</div>
+<div class="hf-ticket-box_actions-row">
+  <div class="hf-ticket-box_actions-row_element hf-mod-justify-center hf-ticket-box_ticket-pin hf-tooltipped hf-tooltipped-bottom  " data-test-id="ticket-box-pin-345601" role="button" aria-label="Pin">
+    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M1.005 15.102c.167.166 5.311-4.026 5.311-4.026l2.72 2.701s.626-.254.626-1.237c0-.983-.786-2.32-.022-3.128.765-.81 2.45-2.408 2.45-2.408s.647-.44 2.55-.103c.667-.713.267-1.273.267-1.273l-4.503-4.55s-.764-.286-1.2.24c.177 1.528-.167 2.825-.167 2.825L6.718 6.388s-.172.561-3.47 0c-.653 0-.926.561-.926.561l2.704 2.463s-4.189 5.524-4.021 5.69z" stroke="#B8B8B8" fill="none" fill-rule="evenodd"></path></svg>
+</div>
+    <div class="hf-ticket-box_actions-row_element hf-mod-justify-center hf-u-vertically-centered-container hf-ticket-box_subscribe hf-tooltipped hf-tooltipped-bottom " data-test-id="ticket-action_subscribe" aria-label="Subscribe" data-ember-action="" data-ember-action-141="141"><svg class="hf-subscribe-icon" width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg"><path d="M8.497 0L5.872 4.795 0 5.736 4.141 9.55l-.971 5.36 5.401-2.463L13.64 15l-.825-5.459L17 5.78l-5.772-.839z" stroke="#AEAEAE" fill="none" fill-rule="evenodd"></path></svg></div>
+  <div id="ember142" class="hf-pop-over-container ember-view"><div aria-label="More Actions" data-test-id="ticket-box_more-actions" id="ember143" class="hf-ticket-box_more-actions hf-ticket-box_actions-row_element hf-mod-justify-center hf-tooltipped hf-tooltipped-bottom hf-popover-trigger ember-view">      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="4" viewBox="0 0 16 4"><path d="M2.75.75c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5-.675-1.5-1.5-1.5zm10.5 0c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5-.675-1.5-1.5-1.5zM8 .75c-.825 0-1.5.675-1.5 1.5s.675 1.5 1.5 1.5 1.5-.675 1.5-1.5S8.825.75 8 .75z" fill="#999A9B" fill-rule="nonzero"></path></svg>
+</div><!---->
+<!----></div>
+  <div class="hf-ticket-box_actions-row_hover-zone" data-test-id="ticket-box-actions-row-hover-zone">
+    <div id="ember144" class="hf-ticket-box_actions-row_element ember-view"><div id="ember145" class="hf-pop-over-container ember-view"><div data-test-id="ticket-action_change-assignee_trigger" role="button" id="ember146" class="hf-ticket-action hf-mod-assignee hf-u-vertically-centered-container hf-popover-trigger ember-view"><!---->        <div>
+          <div class="hf-ticket-action_label">assignee</div>
+          <div class="hf-ticket-action_value" data-test-id="ticket-box_assignee">
+              ~
+                      </div>
+        </div>
+</div><!---->
+<!----></div></div>
+    <div id="ember147" class="hf-ticket-box_actions-row_element ember-view"><div id="ember148" class="hf-pop-over-container ember-view"><div data-test-id="ticket-box_raised-by_trigger" title="Mail Delivery System
+(MAILER-DAEMON@mailserver4.happyfox)" id="ember149" class="hf-ticket-action hf-mod-raised-by hf-popover-trigger ember-view">      <div class="hf-contact-initials" style="background:url(https://d12tly1s0ox52d.cloudfront.net/assets/svgs/patterns/pattern11-53b562dfddb315bfdfdb32b293ea22e9.svg) no-repeat center center;">
+        MD
+      </div>
+    <div>
+      <div class="hf-ticket-action_label">raised by</div>
+      <div class="hf-ticket-action_value" data-test-id="ticket-box_raised-by">Mail Delivery System</div>
+    </div>
+</div><!---->
+<!----></div></div>
+    <div id="ember150" class="hf-ticket-box_actions-row_element ember-view"><div id="ember151" class="hf-pop-over-container ember-view"><div data-test-id="ticket-action_change-priority_trigger" id="ember152" class="hf-ticket-action hf-mod-priority hf-u-vertically-centered-container hf-popover-trigger ember-view">        <div class="hf-ticket-action_label">priority</div>
+        <div class="hf-ticket-action_value  " data-test-id="ticket-box_priority">
+            Medium
+        </div>
+</div><!---->
+<!----></div></div>
+    <div id="ember153" class="hf-ticket-box_actions-row_element ember-view"><div id="ember154" class="hf-pop-over-container ember-view"><div data-test-id="ticket-action_change-category_trigger" id="ember155" class="hf-ticket-action hf-mod-category hf-u-vertically-centered-container hf-popover-trigger ember-view">          <div class="hf-ticket-action_label">category</div>
+          <div class="hf-ticket-action_value hf-mod-category-value" title="Inbox" data-test-id="ticket-box_category">
+            Inbox
+          </div>
+</div><!---->
+<!----></div></div>
+    <div id="ember156" class="hf-ticket-box_actions-row_element hf-mod-change-due-date ember-view"><div id="ember157" class="hf-pop-over-container ember-view"><div data-test-id="ticket-action_change-due-date_trigger" id="ember158" class="hf-ticket-action hf-mod-due-date hf-mod-explicit-ticket-action hf-u-vertically-centered-container hf-popover-trigger ember-view">        <div class="">
+  <div class="hf-due-date-container">
+      <div class="hf-ticket-action_label" data-test-id="due-date-label">
+          due date
+      </div>
+    <div class="hf-ticket-action_value" data-test-id="due-date-value">
+        ~
+    </div>
+  </div>
+</div>
+</div><!---->
+<!----></div></div>
+  </div>
+<!---->  <div id="ember160" class="hf-u-push-right hf-ticket-box_actions-row_element hf-mod-response-indicator ember-view"><div class="hf-ticket_response-indicator">
+    <div class="hf-ticket_response-indicator_dot hf-tooltipped hf-tooltipped-bottom-left hf-mod-unresponded hf-mod-delayed hf-mod-move-left" aria-label="Unresponded by Agent"></div>
+</div>
+</div>
+</div>
+</article>
+
+<!---->
+<!---->
+      <div id="ember161" class="ember-view"><section class="hf-updates-section ">
+  <header class="hf-u-clearfix">
+    <section class="hf-u-vertically-centered-container  ">
+      <h1>Updates</h1>
+        <section id="ember162" class="hf-add-subscribers ember-view"><div id="ember163" class="hf-pop-over-container ember-view"><div data-test-id="add-or-show-subscribers" role="button" id="ember248" class="hf-u-vertically-centered-container hf-popover-trigger ember-view">        <div class="hf-add-subscriber_add-text">Add Subscribers</div>
+              <span class="hf-share-subscriber_icon" data-test-id="share-subscribers-indicator">
+          <svg class="hf-add-subscriber_indicator-image" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="hf-550a" d="M0 0h17.038v17.038H0z"></path></defs><g transform="translate(.446 .48)" fill="none" fill-rule="evenodd" opacity=".8"><mask id="hf-551b" fill="#fff"><use xlink:href="#hf-550a"></use></mask><path d="M4.478 14.554c-.359 0-.662-.125-.91-.373a1.239 1.239 0 0 1-.373-.91V7.317c0-.359.124-.662.372-.91.249-.25.552-.374.911-.374h1.816V7.1H4.478a.208.208 0 0 0-.15.069.208.208 0 0 0-.068.15v5.952c0 .055.022.105.068.15a.208.208 0 0 0 .15.069h8.082a.208.208 0 0 0 .15-.069.209.209 0 0 0 .069-.15V7.318a.209.209 0 0 0-.068-.15.208.208 0 0 0-.15-.069h-1.816V6.034h1.815c.359 0 .663.125.911.373.248.249.373.552.373.91v5.953c0 .359-.124.662-.373.91a1.239 1.239 0 0 1-.91.374H4.477zm3.509-3.373v-7.83L6.673 4.663l-.748-.76L8.52 1.312l2.594 2.594-.748.759L9.052 3.35v7.831H7.987z" fill="#15171A" fill-rule="nonzero" mask="url(#hf-551b)"></path></g></svg>
+        </span>
+</div>  <!---->
+<!----></div></section>
+    </section>
+      <a class="hf-updates-section_expand-all" data-test-id="updates-section_expand-all" data-ember-action="" data-ember-action-164="164">
+        <span class="hf-updates-section_expand-all_icon "></span>
+          Expand all
+      </a>
+<!----><!----><!----><div id="ember165" class="hf-updates-view ember-view"><div data-test-id="all-updates-view" id="ember166" class="hf-tab updates-view_item hf-tab hf-is-active ember-view">        All (2)
+</div><!----><div data-test-id="message-updates-view" id="ember167" class="hf-tab updates-view_item hf-tab ember-view">        Messages (1)
+</div><!----><!----><div data-test-id="related-tickets-view" id="ember168" class="hf-tab updates-view_item hf-tab ember-view">          Related (1)
+</div><!----><div data-test-id="tasks-view" id="ember169" class="hf-tab updates-view_item hf-tab ember-view">          Tasks (0)
+</div></div>  </header>
+  <section class="hf-updates-section-body">
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->    
+<!---->        
+<!---->        <article data-test-id="ticket-update" data-scroll-id="9163" id="ember170" class="hf-ticket-update hf-is-expanded ember-view"><div class="hf-update-box hf-mod-activity-messages">
+
+  <header class="hf-update-box_header  " data-test-id="ticket-update_header-9163" data-ember-action="" data-ember-action-172="172">
+<div id="ember173" class="hf-pop-over-container ember-view"><div data-test-id="hf-view-details-popover-trigger-9163" tabindex="0" id="ember174" class="hf-popover-trigger ember-view">      <div class="hf-update-box_header_left  " data-ember-action="" data-ember-action-175="175">
+            <span class="hf-update-box_header_left_icon"><svg width="22" height="22" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#D4D4D4" cx="10" cy="10" r="10"></circle><rect fill="#FFF" x="9" y="7.429" width="2.571" height="8.571" rx="4"></rect><circle fill="#FFF" cx="10.286" cy="5.286" r="1.286"></circle></g></svg></span>
+                  <div class="hf-updater">
+          <div class="hf-updater_name-and-recipient-details">
+            <div class="hf-updater_name " title="HappyFox Workflows " data-test-id="hf-updater_name-9163">
+                    HappyFox Workflows 
+                            </div>
+<!---->          </div>
+          <div class="hf-updater_update-time hf-font-light hf-tooltipped hf-tooltipped-right" aria-label="Sep 27, 2025, 10:42 AM">
+            4 days ago
+          </div>
+        </div>
+      </div>
+</div><!---->
+<!----></div>
+<!---->
+<!---->
+<!---->
+  <div class="hf-update-box_header_right">
+<!---->
+          <div class="hf-update-box_header_permalink hf-tooltipped hf-tooltipped-top" aria-label="Copy to clipboard" data-state="copy-to-clipboard">
+  
+            <svg class="hf-u-vertical-middle" width="11" height="13" viewBox="0 0 11 13" xmlns="http://www.w3.org/2000/svg"><g transform="rotate(-40 4 2.379)" stroke="#979797" fill="none" fill-rule="evenodd"><rect width="5" height="6" rx="2"></rect><rect y="7" width="5" height="6" rx="2"></rect><path d="M2.574 3.36v6.5"></path></g></svg> Permalink
+          
+</div>
+<!----><!----><!----><!----><!----><!---->
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->  </div>
+</header>
+
+
+
+      <ul id="ember176" class="hf-update-activities-area ember-view"><!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+    <li class="hf-update-activity">
+      Added tags <span class="hf-summary-value">Matter</span>
+    </li>
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!----></ul>
+</div>
+
+<!---->
+<!---->
+<!----></article>
+        <div id="ember177" class="ember-view"><!----><!----><!----></div>
+        <article data-test-id="ticket-update" data-scroll-id="9162" id="ember178" class="hf-ticket-update hf-is-expanded ember-view"><div class="hf-update-box ">
+
+  <header class="hf-update-box_header hf-mod-collapse-disabled " data-test-id="ticket-update_header-9162" data-ember-action="" data-ember-action-180="180">
+<div id="ember181" class="hf-pop-over-container ember-view"><div data-test-id="hf-view-details-popover-trigger-9162" tabindex="0" id="ember182" class="hf-popover-trigger ember-view">      <div class="hf-update-box_header_left hf-update-box_expandable " data-ember-action="" data-ember-action-183="183">
+            <div class="hf-contact-initials" style="background:url(https://d12tly1s0ox52d.cloudfront.net/assets/svgs/patterns/pattern11-53b562dfddb315bfdfdb32b293ea22e9.svg) no-repeat center center;">MD</div>
+        <div class="hf-updater">
+          <div class="hf-updater_name-and-recipient-details">
+            <div class="hf-updater_name " title="Mail Delivery System" data-test-id="hf-updater_name-9162">
+                    Mail Delivery System
+                            </div>
+              <div class="hf-ticket-update_recipients-details_popover-indicator" data-test-id="ticket-update_recipient-details-9162">
+                
+                <span class="hf-popover_open-closed-indicator">
+                  <svg width="11" height="7" viewBox="0 0 11 7" xmlns="http://www.w3.org/2000/svg"><path d="M.033 1.217L5.437 6.84l5.403-5.623-1.2-1.25L5.437 4.34 1.234-.033l-1.2 1.25z" fill="#929292" fill-rule="evenodd" opacity=".5"></path></svg>
+                </span>
+              </div>
+          </div>
+          <div class="hf-updater_update-time hf-font-light hf-tooltipped hf-tooltipped-right" aria-label="Sep 27, 2025, 10:42 AM">
+            4 days ago
+          </div>
+        </div>
+      </div>
+</div>      <div class="hf-ticket-update_recipients-details" data-ember-action="" data-ember-action-184="184">
+<!---->      </div>
+
+<!----></div>
+<!---->
+<!---->
+<!---->
+  <div class="hf-update-box_header_right">
+<!---->
+          <div class="hf-update-box_header_permalink hf-tooltipped hf-tooltipped-top" aria-label="Copy to clipboard" data-state="copy-to-clipboard">
+  
+            <svg class="hf-u-vertical-middle" width="11" height="13" viewBox="0 0 11 13" xmlns="http://www.w3.org/2000/svg"><g transform="rotate(-40 4 2.379)" stroke="#979797" fill="none" fill-rule="evenodd"><rect width="5" height="6" rx="2"></rect><rect y="7" width="5" height="6" rx="2"></rect><path d="M2.574 3.36v6.5"></path></g></svg> Permalink
+          
+</div>
+<!----><!----><!----><!----><!----><!---->
+<!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->  </div>
+</header>
+
+
+
+<!----><!---->        <div class="hf-update-box_body" data-test-id="update-box-body-html">
+          <!---->
+<!---->            <div>
+  [EXTERNAL EMAIL] DO NOT CLICK links or attachments unless you recognize the sender and know the content is safe.<br>This is the mail system at host <a href="http://mailserver4.mail.happyfox.com" target="_blank" rel="noopener noreferrer">mailserver4.mail.happyfox.com</a>.<br><br>I'm sorry to have to inform you that your message could not<br>be delivered to one or more recipients. It's attached below.<br><br>For further assistance, please send mail to postmaster.<br><br>If you do so, please include this problem report. You can<br>delete your own text from the attached returned message.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The mail system<br><br>&lt;<a href="mailto:test@test.com" target="_blank" rel="noopener noreferrer">test@test.com</a>&gt;: connect to <a href="http://test.com" target="_blank" rel="noopener noreferrer">test.com</a>[3.18.255.247]:25: Connection timed out<br><div></div><div style="margin: 15px 0 0 10px; overflow: visible; width: 570px;">
+<h3 style="margin: 0 0 8px 0; padding: 0px;">Indiana Legal Help Desk Ticket: #INB00345506</h3>
+
+<div style="margin: 6px 0 8px; padding: 0; background-color: #11264a; height: 4px; line-height: 4px; font-size: 4px;">&nbsp;</div>
+<img src="https://indianalegalhelp.org/wp-content/uploads/2023/07/ILH-logo-dark.svg" alt="Indiana Legal Help Desk"><br>
+Dear Test,<br>
+<br>
+Thanks for reaching out to Indiana Legal Help Desk. We'll get back to your shortly.<br>
+<br>
+Your ticket ID is #INB00345506 and a copy of your original message is included below.<br>
+<br>
+Chat conversation by Jason (<a href="mailto:test@test.com" target="_blank" rel="noopener noreferrer">test@test.com</a>) on Sep 22nd 2025<br><br>Bot : Welcome to Indiana Legal virtual assistant. Have legal questions? We can help. - 10:19 AM<br>Bot : Housing Issue, Other Legal Issue - 10:19 AM<br>Visitor : Other Legal 
+Issue - 10:19 AM<br>Bot : Hello, I can help you find information, forms or guide you to a local legal aid provider through this site.<br><br>Please note that this chat service cannot give you legal advice or be your lawyer. - 10:19 AM<br>Bot : What can I help you with today? - 10:19 AM<br>Bot : Find a Lawyer, Find a legal clinic, Find legal information, Find a form, Start Over - 10:19 AM<br>Visitor : Start Over - 10:20 AM<br>Bot : Welcome to Indiana Legal virtual assistant. Have legal questions? We can help. - 10:20 AM<br>Bot : Housing Issue, Other Legal Issue - 10:20 AM<br>Visitor : Housing Issue - 10:20 AM<br>Bot : Have housing questions? You can ask a question online, text or email us and a Navigator will get back to you shortly. - 10:20 AM<br>Bot : Online Contact Form, Call, Chat with a Navigator, Text, Email, Start Over - 10:20 AM<br>Visitor : Chat with a Navigator - 10:22 AM<br>Bot
+ : Can you please provide the below information before we transfer your conversation to a live agent. - 10:22 AM<br>Bot : Form was shown Collect Form Info Form - 10:22 AM<br>Visitor : Filled a form Name: Jason<br>Email: <a href="mailto:test@test.com" target="_blank" rel="noopener noreferrer">test@test.com</a><br>County: Brown<br>in-a-few-words-what-is-your-question-about%3F: This is Jason, test! - 10:23 AM<br>Bot : Please click "Chat Now" to talk to an agent - 10:23 AM<br>Bot : Chat Now - 10:23 AM<br>Bot : Live chat transfer initiated - 10:23 AM<br><br><br>Jason : Test! - 10:23 AM <br>Kaelie (Agent) : Hi Jason! - 10:23 AM <br>Jason : Hi! Doing a training and showing off chat! - 10:23 AM <br>Kaelie (Agent) : Hello everyone! Good luck with training! - 10:24 AM <br>Jason : Thanks! Bye! - 10:24 AM <br><br><br>Stats:<br>Url: <a href="https://bot-widget.happyfox.com/live-chat-widget.html?embed_token=3f928a90-364f-11f0-9990-4d1b056f3374" target="_blank" rel="noopener noreferrer">https://bot-widget.happyfox.com/live-chat-widget.html?embed_token=3f928a90-364f-11f0-9990-4d1b056f3374</a><br>Website Profile: Indiana Legal 
+Help<br>Waiting Time: 19.117 seconds<br>Chat Duration: 54.253 seconds<br>Routing Mode: Broadcast<br>Operating System: Windows 10<br>Browser: Chrome 140.0<br><br>
+<br>
+Sincerely,<br>
+Indiana Legal Help Desk<br>
+&nbsp;</div>
+<div value="8a39cc15b9b64db28a5eb87f8c5836d3" style="display: none;" name="threading-identifier"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+<!---->
+<!----><!----><!----><!----><!----><!----><!----><!----><!---->        </div>
+
+            <footer class="hf-update-box_footer">
+<!----><!----><!---->
+    <div class="hf-update-box_footer_recipients">
+      <div class="hf-u-label">
+            Other Recipients
+              </div>
+      <div class="hf-u-vertically-centered-container">
+        <div class="hf-update-box_footer_recipients_value">
+            none
+        </div>
+<!---->      </div>
+    </div>
+    <div class="hf-update-box_footer_right">
+<!---->
+<div id="ember186" class="hf-pop-over-container ember-view"><div id="ember187" class="hf-popover-trigger ember-view">            <div class="hf-update-box_footer_right_more " data-test-id="update-box-more-9162">more</div>
+</div><!---->
+<!----></div><!----><!---->    </div>
+  </footer>
+
+<!----></div>
+
+<!---->
+  <ul id="ember188" class="hf-update-activities-area ember-view">    <li class="hf-update-activity" data-test-id="edit-message-activity-log">
+      Ticket created by contact <span class="hf-summary-value">Mail Delivery System</span>
+    </li>
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+    <li class="hf-update-activity">
+      Priority set to <span class="hf-summary-value">Medium</span>
+    </li>
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+    <li class="hf-update-activity">
+      Status set to <span class="hf-update-activity_status" style="background-color: #FF0000; color: var(--hf-hd-text-white-100);">Open</span>
+    </li>
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!----></ul>
+
+<!----></article>
+        <div id="ember189" class="ember-view"><!----><!----><!----></div>
+<!---->        <div id="ember190" class="ember-view"></div>
+<!----><!----><!----><!----><!----><!----><!---->  </section>
+</section>
+<!----></div>
+
+
+</section>        <div id="ember191" class="hf-floating-editor hf-mod-minimized ember-view">  <div data-test-id="ticket-details-minimized-update" id="ember192" class="hf-fade-in hf-u-clearfix hf-floating-editor_minimized-view-container ember-view">    <div class="hf-floating-editor_minimized-draft hf-u-clearfix " data-test-id="private-note-link" data-ember-action="" data-ember-action-249="249">
+      <div class="hf-floating-editor_minimized-draft_main">
+        <div class="hf-floating-editor_minimized-draft_message">
+          asdasda
+        </div>
+        <span class="hf-u-pull-right">
+<!---->        </span>
+      </div>
+      <div class="hf-floating-editor_minimized-draft_maximize-button">
+        _
+      </div>
+    </div>
+<!----><!---->      <div class="hf-floating-editor_minimized-tab">
+        <a class="hf-floating-editor_links" data-test-id="reply-link" data-ember-action="" data-ember-action-250="250">
+          Add Reply Instead
+        </a>
+      </div>
+</div>
+<!----></div>
+      <aside id="ember195" class="hf-details-side-pane ember-view"><!---->
+
+    <div class="hf-details-side-pane_search">
+      <div id="ember196" class="hf-u-flex-max-width ember-view"><div id="ember197" class="hf-mod-custom-field-search-box hf-mod-dropdown ember-view">    <div class="ember-basic-dropdown">
+    <div aria-label="Search Ticket and Contact Custom fields" class="ember-view ember-basic-dropdown-trigger ember-basic-dropdown-trigger--in-place  ember-power-select-trigger hf-mod-custom-field-search-trigger" role="button" tabindex="0" data-ebd-id="ember198-trigger" aria-owns="ember-basic-dropdown-content-ember198">
+    
+          <span class="ember-power-select-placeholder">Search Ticket and Contact Custom fields</span>
+
+<span class="ember-power-select-status-icon"></span>
+
+  
+  </div>
+
+    <div id="ember-basic-dropdown-content-ember198" class="ember-basic-dropdown-content-placeholder" style="display: none;"></div>
+
+</div>
+
+</div></div>
+      <button class="hf-u-push-left hf-mod-no-margin-right hf-u-vertically-centered-container hf-kb-side-pane-trigger" data-test-id="kb-side-pane-trigger" aria-label="Open Knowledge base sidepane" data-ember-action="" data-ember-action-204="204"><svg class="hf-details-side-pane_kb-side-pane-trigger" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><g stroke="#979797" stroke-width="1.5" fill="none" fill-rule="evenodd"><path d="M15.829 3.072a8.252 8.252 0 0 1-.025.006l-.015.005.04-.011zm.409 1.442L28.115.791c.302-.086.544-.043.782.141.246.19.353.409.353.723v22.758c0 .297-.098.569-.31.84-.213.273-.454.436-.74.51l-12.256 3.368a2.454 2.454 0 0 1-.473.093c-.183.018-.34.026-.471.026-.18 0-.354-.012-.524-.036a4.692 4.692 0 0 1-.466-.088l-12.201-3.33c-.278-.085-.53-.263-.75-.543-.21-.271-.309-.543-.309-.84V1.655c0-.314.107-.534.353-.723.238-.184.48-.227.8-.136l11.868 3.718c.022.007.302.08.423.11l.208.048c.235.05.427.078.598.078.171 0 .365-.028.602-.079.067-.014.136-.03.207-.047.125-.03.422-.107.386-.098l.043-.012z"></path><path d="M14.75 5v24" stroke-linecap="square"></path><path d="M3.302 13.5l9.198 3m-9.198 3l9.198 3m-9.198-15l9.198 3m14 3l-9.198 3m9.198 3l-9.198 3m9.198-15l-9.198 3" stroke-linecap="round"></path></g></svg></button>
+    </div>
+    <div class="hf-details-side-pane_scrollable hf-js-side-pane-scrollable ">
+<div id="ember205" class="ember-view"><section class="hf-card">
+    
+<header class="hf-card_header hf-js-card-header-stickable">
+    <h3 class="hf-card_header_title hf-u-cursor-pointer" data-test-id="hf-card-header-title" data-ember-action="" data-ember-action-206="206">Contact Information</h3>
+            <a data-test-id="contact-custom-field-save-all" disabled="" id="ember369" class="hf-card_header_action-item hf-primary-action hf-is-disabled ember-view"><!---->Save
+</a>
+        <a class="hf-card_header_action-item" tabindex="0" data-test-id="contact-custom-field-cancel-all" data-ember-action="" data-ember-action-370="370">Cancel</a>
+<!---->
+</header>
+<div id="ember209" class="ember-view">    <div class="hf-card_content">
+            <div id="ember210" class="hf-card_contact-info ember-view"><div id="ember211" class="ember-view">  <div class="hf-custom-field hf-mod-inline-edit">
+    <section id="ember393" class="hf-form-field ember-view">  <div class="hf-form-field_label-wrap hf-u-flex-container">
+    <div class="hf-form-field_label     hf-label" data-test-id="form-field-label-name">
+        Full Name
+      <!---->    </div>
+<!----><!---->  </div>
+  <div id="ember394" class="hf-form-field_value ember-view"><input aria-label="Full Name" data-test-id="name" id="ember395" class="hf-form-field-input hf-text-input hf-custom-field_input_text   ember-text-field ember-view" type="text">
+<!---->
+</div>
+
+</section>
+    <div class="hf-custom-field_inline-action" data-test-id="custom-field-inline-action">
+      <a id="ember396" class="hf-custom-field_inline-action_item hf-primary-action ember-view"><!---->Save
+</a>
+      <a class="hf-custom-field_inline-action_item hf-mod-cancel" data-ember-action="" data-ember-action-397="397">Cancel</a>
+    </div>
+  </div>
+</div>
+  <div id="ember214" class="ember-view">  <div class="hf-card_content_contact-info-item">
+    <svg class="hf-u-icon-right-margin" width="15" height="11" viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M2.371 1.71a.382.382 0 0 0-.543.117.419.419 0 0 0 .137.56l5.143 3.347a.396.396 0 0 0 .272.064.394.394 0 0 0 .272-.064l5.007-3.347a.42.42 0 0 0 .137-.56.382.382 0 0 0-.543-.117L7.38 4.97 2.37 1.71zM12.966.812c.474-.033.981.474.981.88V8.7c0 .372-.507.914-.914.914H1.693c-.406 0-.88-.507-.88-.88V1.693c-.068-.372.609-.982.947-.88h11.206zM1.626 0C.913 0 .033.846 0 1.557v7.312c0 .644.948 1.591 1.591 1.558h11.544c.711 0 1.59-.88 1.625-1.625v-7.21C14.76.88 13.914 0 13.101 0H1.625z" fill="#7C7C7C" fill-rule="evenodd"></path></svg>
+        <span>MAILER-DAEMON@mailserver4.happyfox</span>
+        <span class="hf-u-cursor-pointer" data-ember-action="" data-ember-action-215="215">
+<!---->          <svg class="hf-custom-field_inline-edit-icon" width="10" height="10" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg"><path d="M.759 10.269l-.035-2.8 2.999 3-2.964-.2zm5.71-8.545L9.415 4.67 4.184 9.9 1.237 6.955 6.47 1.724zM8.192 0l2.947 2.946-1.15 1.15-2.946-2.947L8.193 0z" fill="gray" fill-rule="evenodd"></path></svg>
+        </span>
+  </div>
+</div>
+  <div id="ember216" class="ember-view">  <div class="hf-card_content_contact-info-item">
+    <svg class="hf-u-icon-right-margin" width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><path d="M3.129.527L.803 3.079s.939 6.486 10.464 10.636a15.196 15.196 0 0 0 2.396-2.623l-3.417-2.386-1.818.859L4.56 5.49l.937-1.645L3.129.526z" stroke="#979797" fill="none" fill-rule="evenodd"></path></svg>
+<!---->        <span class="hf-u-cursor-pointer" data-ember-action="" data-ember-action-217="217">
+            No Phone Number
+          <svg class="hf-custom-field_inline-edit-icon" width="10" height="10" viewBox="0 0 12 11" xmlns="http://www.w3.org/2000/svg"><path d="M.759 10.269l-.035-2.8 2.999 3-2.964-.2zm5.71-8.545L9.415 4.67 4.184 9.9 1.237 6.955 6.47 1.724zM8.192 0l2.947 2.946-1.15 1.15-2.946-2.947L8.193 0z" fill="gray" fill-rule="evenodd"></path></svg>
+        </span>
+  </div>
+</div>
+
+<!---->
+<!----></div>
+<!---->                          <div data-test-id="custom-field" data-scroll-id="contact-14" id="ember218" class="hf-custom-field ember-view">  <div class="hf-custom-field_label-container">
+    <label class="hf-label hf-custom-field_label  hf-is-compulsory" data-test-id="custom-field-label-14">PreferedContactMethod</label>
+<!---->  </div>
+    <div id="ember371" class="ember-view"><ul data-test-id="custom-fields-multi-select-14" id="ember372" class="  multiselect-checkboxes ember-view">    	 <li>
+	   <label class="hf-u-cursor-pointer" data-test-id="field-Email">
+	     <input data-test-id="field-Email-checkbox" id="ember373" class="ember-checkbox ember-view" type="checkbox">
+      Email
+	   </label>
+	 </li>
+
+    	 <li>
+	   <label class="hf-u-cursor-pointer" data-test-id="field-Text Message (SMS)">
+	     <input data-test-id="field-Text Message (SMS)-checkbox" id="ember374" class="ember-checkbox ember-view" type="checkbox">
+      Text Message (SMS)
+	   </label>
+	 </li>
+
+</ul>
+<!---->
+</div>
+<!----></div>
+
+    <div class="hf-card_content_more hf-mod-show-more hf-js-card-more-content" style="height: auto; overflow-y: visible;">
+<!---->    </div>
+<!---->
+    </div>
+</div>
+</section>
+
+</div><div id="ember220" class="ember-view"><section class="hf-card">
+    
+<header class="hf-card_header hf-js-card-header-stickable">
+    <h3 class="hf-card_header_title hf-u-cursor-pointer" data-test-id="hf-card-header-title" data-ember-action="" data-ember-action-221="221">Ticket Information</h3>
+            <a data-test-id="ticket-custom-field-save-all" disabled="" id="ember375" class="hf-card_header_action-item hf-primary-action hf-is-disabled ember-view"><!---->Save
+</a>
+        <a class="hf-card_header_action-item" tabindex="0" data-test-id="ticket-custom-field-cancel-all" data-ember-action="" data-ember-action-376="376">Cancel</a>
+<!---->
+</header>
+<div id="ember223" class="ember-view">    <div class="hf-card_content">
+            <!---->
+<!---->                      <div data-test-id="custom-field" data-scroll-id="ticket-13" id="ember224" class="hf-custom-field ember-view">  <div class="hf-custom-field_label-container">
+    <label class="hf-label hf-custom-field_label  hf-is-compulsory" data-test-id="custom-field-label-13">County</label>
+<!---->  </div>
+    <div id="ember377" class="ember-view"><div id="ember378" class="hf-js-test-custom-fields-select-13 hf-mod-dropdown ember-view">    <div class="ember-basic-dropdown">
+    <div class="ember-view ember-basic-dropdown-trigger ember-basic-dropdown-trigger--in-place  ember-power-select-trigger" role="button" tabindex="0" data-ebd-id="ember379-trigger" aria-owns="ember-basic-dropdown-content-ember379">
+    
+        <!---->
+<span class="ember-power-select-status-icon"></span>
+
+  
+  </div>
+
+    <div id="ember-basic-dropdown-content-ember379" class="ember-basic-dropdown-content-placeholder" style="display: none;"></div>
+
+</div>
+
+</div><!---->
+</div>
+<!----></div>
+
+                      <div data-test-id="custom-field" data-scroll-id="ticket-15" id="ember226" class="hf-custom-field ember-view">  <div class="hf-custom-field_label-container">
+    <label class="hf-label hf-custom-field_label  hf-is-compulsory" data-test-id="custom-field-label-15">Legal Issue</label>
+<!---->  </div>
+    <div id="ember385" class="ember-view"><div id="ember386" class="hf-js-test-custom-fields-select-15 hf-mod-dropdown ember-view">    <div class="ember-basic-dropdown">
+    <div class="ember-view ember-basic-dropdown-trigger ember-basic-dropdown-trigger--in-place  ember-power-select-trigger" role="button" tabindex="0" data-ebd-id="ember387-trigger" aria-owns="ember-basic-dropdown-content-ember387">
+    
+        <!---->
+<span class="ember-power-select-status-icon"></span>
+
+  
+  </div>
+
+    <div id="ember-basic-dropdown-content-ember387" class="ember-basic-dropdown-content-placeholder" style="display: none;"></div>
+
+</div>
+
+</div><!---->
+</div>
+<!----></div>
+
+    <div class="hf-card_content_more hf-mod-show-more hf-js-card-more-content" style="height: auto; overflow-y: visible;">
+<!---->    </div>
+<!---->
+    </div>
+</div>
+</section>
+
+</div>              <div id="ember228" class="ember-view"><section class="hf-card" data-test-id="tasks-card">
+  <section class="hf-card">
+    
+<header class="hf-card_header hf-js-card-header-stickable hf-js-tasks-header">
+    <h3 class="hf-card_header_title hf-u-cursor-pointer" data-test-id="hf-card-header-title" data-ember-action="" data-ember-action-229="229">Tasks</h3>
+    <div id="ember230" class="hf-add-task_trigger hf-u-pull-right hf-pop-over-container ember-view"><div aria-label="Add" id="ember231" class="hf-u-inline-block hf-popover-trigger ember-view">              <a class="hf-card_header_action-item " data-test-id="add-task-trigger">Add Task</a>
+</div><!---->
+<!----></div><div id="ember232" class="hf-add-task_trigger hf-u-pull-right hf-pop-over-container ember-view"><div aria-label="Use Template" id="ember233" class="hf-u-inline-block hf-popover-trigger ember-view">              <a class="hf-card_header_action-item " data-test-id="apply-task-trigger">Use Template</a>
+</div><!---->
+<!----></div><!---->
+</header>
+<div id="ember234" class="hf-mod-tasks ember-view">    <div class="hf-card_content hf-mod-tasks">
+                  <div class="hf-card_content_readonly-info hf-mod-empty-message" data-test-id="empty-tasks-message">No tasks for this ticket.</div>
+
+    </div>
+</div>  
+</section>
+
+</section>
+</div>
+                          <div id="ember235" class="ember-view"><section class="hf-card">
+  <section class="hf-card">
+    
+    
+<header class="hf-card_header hf-js-card-header-stickable">
+    <h3 class="hf-card_header_title hf-u-cursor-pointer" data-test-id="hf-card-header-title" data-ember-action="" data-ember-action-236="236">Tags</h3>
+                      <a class="hf-card_header_action-item " data-test-id="edit-tags" data-ember-action="" data-ember-action-237="237">Edit</a>
+                
+</header>
+<div id="ember238" class="hf-mod-tags ember-view">    <div class="hf-card_content hf-mod-tags">
+                  <div data-test-id="tags-container" id="ember239" class="hf-tags-container ember-view">  <span class="hf-card_items-list_item hf-mod-cursor-pointer" data-test-id="tag" data-ember-action="" data-ember-action-240="240"> Matter </span>
+</div>
+            <span class="hf-card_items-list_add-item " data-test-id="add-tags-trigger" data-ember-action="" data-ember-action-241="241"> + </span>
+
+    </div>
+</div>  
+</section>
+
+</section></div>
+                          <div id="ember242" class="ember-view"><section class="hf-card">
+    
+<header class="hf-card_header hf-js-card-header-stickable">
+    <h3 class="hf-card_header_title hf-u-cursor-pointer" data-test-id="hf-card-header-title" data-ember-action="" data-ember-action-243="243">Time Spent</h3>
+    <div id="ember244" class="hf-pop-over-container hf-card_header_action-item ember-view"><div id="ember245" class="hf-popover-trigger ember-view">          <a class="hf-card_header_action-item " data-test-id="add-time-spent-pop-over-trigger"> Add </a>
+</div><!---->
+<!----></div>
+</header>
+<div id="ember246" class="ember-view">    <div class="hf-card_content">
+            <div class="hf-card_content_time-spent" data-test-id="time-spent">
+          0 min
+    </div>
+
+    </div>
+</div>
+</section>
+</div>
+                    <div class="hf-reorder-container">
+            <button class="hf-task-table-header_action-item" data-test-id="reorder-cards-trigger" data-ember-action="" data-ember-action-247="247">
+                <svg width="17" height="16" viewBox="0 0 17 16" xmlns="http://www.w3.org/2000/svg"><path d="M11.75 1.5a3.5 3.5 0 0 1 3.494 3.308L15.25 5v6a3.5 3.5 0 0 1-3.308 3.495l-.192.005H6.734a3.5 3.5 0 0 1-3.495-3.308L3.234 11l-.001-2.132-1.574 1.574-.07.058a.5.5 0 0 1-.638-.765L3.73 6.957l2.778 2.778.058.07a.5.5 0 0 1-.058.637l-.069.058a.5.5 0 0 1-.638-.058L4.233 8.876V11a2.5 2.5 0 0 0 2.336 2.495l.165.005h5.016a2.5 2.5 0 0 0 2.494-2.336L14.25 11V5a2.5 2.5 0 0 0-2.336-2.495L11.75 2.5h-6a.5.5 0 0 1-.09-.992l.09-.008h6z" fill="currentColor" fill-rule="nonzero"></path></svg>
+              <span class="hf-task-table-header-text">Reorder </span>
+            </button>
+        </div>
+    </div>
+<!----></aside>
+</section>
+<!---->
+  </div>
+</section>
+
+<div id="ember101" class="hf-ai-announcement-popover hf-pop-over-container ember-view"><!---->
+<!----></div><div id="ember102" class="hf-ai-announcement-popover hf-ai-popover-nudge-for-agent hf-pop-over-container ember-view"><!---->
+<!----></div><div id="ember103" class="hf-ai-announcement-popover hf-ai-copilot-announcement-popover hf-pop-over-container ember-view"><!---->
+<!----></div><div id="ember104" class="hf-ai-announcement-popover hf-ai-relaunch-popover hf-pop-over-container ember-view"><!---->
+<!----></div><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->  <div data-test-id="session-timeout">
+<!----><!---->  </div>
+<!----><!----><!----><!----><!----><div id="ember105" class="hf-pop-over-container ember-view hf-domain-verification-reminder-popup hf-hide-domain-verification-reminder-popup">
+<!---->
+<!----></div>
+</div>
+</div><script type="text/javascript" async="" src="https://releases.happyfox.com/load-widget/1"></script><div style="position: fixed; bottom: 10px; right: 10px; background: rgb(0, 0, 0); color: rgb(255, 255, 255); padding: 6px 10px; border-radius: 6px; z-index: 999999; font-family: monospace; white-space: pre; display: none; transition: background 0.2s, color 0.2s;"></div><noscript>
+  <a href="https://happyfoxchat.com" title="Live chat software">Live chat software by HappyFox Chat</a>
+</noscript>
+<iframe id="hfc-frame" frameborder="0" allow="autoplay" src="https://widget.happyfoxchat.com/v2/visitor/widget-4124e2f3876c3773a0aaadf57f05bcc4.html" style="visibility: visible; opacity: 1;" class="hfc-frame__hidden hfc-badge hfc-badge__bottom-right hfc-badge__vertical hfc-badge__right"></iframe><div style="display: none; position: absolute; bottom: 0px; right: 20px; z-index: 999; height: 480px; width: 360px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.2) -10px 10px 20px 10px; border-radius: 8px; top: 42.25px;"><iframe id="engage-iframe" src="https://releases.happyfox.com/display-widget/1" style="width: 100%; height: 100%; border: none; border-radius: 8px;"></iframe></div></body></html>
